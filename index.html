@@ -3,68 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atlas Wealth Management. Agente Productor CNV. Gestión patrimonial con visión global, tecnología, seriedad y seguridad regulatoria.">
+    <meta name="description" content="Atlas Wealth Management. Agente Productor CNV. Gestión patrimonial boutique e institucional en Argentina.">
     <title>Atlas Wealth Management | Agente Productor CNV</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* Variables CSS - Paleta Institucional basada en el logo de ATLAS */
+        /* Paleta de Colores Institucional */
         :root {
-            /* Azul profundo institucional para transmitir Seriedad y Seguridad */
-            --primary-color: #0A192F; 
-            /* Azul vibrante del isotipo (Delta) para transmitir Tecnología y Futuro */
-            --accent-color: #2D68C4;  
-            --text-color: #333333;
-            --light-bg: #F8F9FA;
-            --white: #FFFFFF;
-            --border-color: #E2E8F0;
+            --navy-blue: #112236; 
+            --champagne: #C5A880; 
+            --champagne-hover: #b3956d;
+            --text-dark: #2D3748;
+            --text-gray: #4A5568;
+            --bg-light: #FBFBFB;
+            --bg-white: #FFFFFF;
+            --border-light: #E2E8F0;
         }
 
-        /* Reseteo básico */
+        /* Reseteo */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
         body {
-            color: var(--text-color);
-            background-color: var(--white);
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Tipografía y Jerarquía */
-        h1, h2, h3 {
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 1rem;
+        /* Tipografía */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy-blue);
+            font-weight: 600;
         }
 
-        h1 { font-size: 3rem; line-height: 1.2; }
-        h2 { font-size: 2.25rem; text-align: center; margin-bottom: 3rem; }
-        h3 { font-size: 1.5rem; }
-        p { margin-bottom: 1rem; color: #4A5568; }
+        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; position: relative; padding-bottom: 1rem; }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--champagne);
+        }
+        h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+        
+        p { color: var(--text-gray); margin-bottom: 1.25rem; font-weight: 300; }
 
-        /* Estructura general */
+        /* Estructura */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         section {
-            padding: 6rem 0;
+            padding: 7rem 0;
         }
 
-        /* Navegación */
+        /* Botones */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--champagne);
+            color: var(--bg-white);
+            border: 1px solid var(--champagne);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--champagne-hover);
+            border-color: var(--champagne-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy-blue);
+            border: 1px solid var(--navy-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy-blue);
+            color: var(--bg-white);
+        }
+
+        /* Header & Nav */
         header {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -74,190 +125,235 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 90px;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--navy-blue);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            letter-spacing: 0.5px;
         }
 
         .logo-delta {
-            color: var(--accent-color);
-            font-size: 2rem;
+            color: var(--champagne);
+            font-size: 1.8rem;
+            font-style: normal;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            font-size: 0.9rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--champagne);
         }
 
-        /* 1. Hero Section */
+        /* Hero */
         #hero {
-            background-color: var(--light-bg);
-            padding: 8rem 0;
-            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-light);
+            padding: 9rem 0;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 700px;
         }
 
-        .hero-tag {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
+        .hero-subtitle {
             font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--champagne);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
         }
 
-        /* 2. Quiénes Somos */
-        #quienes-somos {
-            background-color: var(--white);
+        .hero-text {
+            font-size: 1.1rem;
+            max-width: 600px;
         }
 
-        .about-grid {
+        /* La Firma */
+        #la-firma {
+            background-color: var(--bg-white);
+        }
+
+        .firma-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            gap: 5rem;
         }
 
-        .values-list {
+        .trust-signals {
             list-style: none;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
-        .values-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
+        .trust-signals li {
             position: relative;
-            font-weight: 600;
-            color: var(--primary-color);
+            padding-left: 2rem;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            color: var(--navy-blue);
         }
 
-        .values-list li::before {
-            content: '•';
-            color: var(--accent-color);
+        .trust-signals li::before {
+            content: '♦';
             position: absolute;
             left: 0;
-            font-size: 1.5rem;
-            line-height: 1;
+            color: var(--champagne);
+            font-size: 1rem;
+            top: 2px;
         }
 
-        /* 3. Servicios Institucionales */
+        /* Servicios */
         #servicios {
-            background-color: var(--light-bg);
+            background-color: var(--navy-blue);
+            color: var(--bg-white);
+        }
+
+        #servicios h2 {
+            color: var(--bg-white);
+        }
+
+        #servicios p {
+            color: #A0AEC0;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
         }
 
-        .service-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .service-item {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        .service-item h3 {
+            color: var(--champagne);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* 4. Marco Regulatorio */
-        #regulacion {
-            background-color: var(--primary-color);
-            color: var(--white);
+        /* Cumplimiento */
+        #cumplimiento {
+            background-color: var(--bg-light);
+        }
+
+        .compliance-box {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-light);
+            padding: 3rem;
+        }
+
+        .disclaimer-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .disclaimer-list li {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .disclaimer-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--champagne);
+        }
+
+        /* Contacto */
+        #contacto {
+            background-color: var(--bg-white);
             text-align: center;
         }
 
-        #regulacion h2 {
-            color: var(--white);
+        #contacto h2::after {
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        #regulacion p {
-            color: #A0AEC0;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
+        .contact-info {
+            margin: 3rem 0;
             font-size: 1.1rem;
         }
 
-        /* 5. Contacto */
-        #contacto {
-            background-color: var(--white);
+        .contact-info strong {
+            color: var(--navy-blue);
+            display: block;
+            margin-top: 1rem;
         }
 
-        .contact-wrapper {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--white);
-            padding: 1rem 2.5rem;
+        .contact-email {
+            font-size: 1.5rem;
+            color: var(--champagne);
             text-decoration: none;
-            font-weight: 600;
-            border-radius: 4px;
-            margin-top: 2rem;
-            transition: background-color 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
 
-        .contact-btn:hover {
-            background-color: #1f4b8f;
-        }
-
-        /* 6. Footer Legal */
+        /* Footer */
         footer {
-            background-color: #050d17;
+            background-color: var(--navy-blue);
             color: #718096;
-            padding: 4rem 0 2rem 0;
-            font-size: 0.85rem;
+            padding: 4rem 0 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .footer-legal {
-            border-top: 1px solid #2D3748;
-            padding-top: 2rem;
-            margin-top: 2rem;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        /* Responsive Design */
+        .footer-logo {
+            color: var(--bg-white);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2.25rem; }
-            .nav-links { display: none; } /* En un proyecto real acá iría un menú hamburguesa */
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            section { padding: 4rem 0; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .firma-grid, .services-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .btn-group { flex-direction: column; }
+            .btn { text-align: center; }
+            section { padding: 5rem 0; }
+            .compliance-box { padding: 2rem; }
         }
     </style>
 </head>
@@ -267,12 +363,12 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">
-                    <span class="logo-delta">Δ</span> ATLAS WEALTH MANAGEMENT
+                    <span class="logo-delta">Δ</span> ATLAS <span style="font-weight: 400; font-size: 1.1rem; margin-left: 5px;">Wealth Management</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#quienes-somos">Institucional</a></li>
+                    <li><a href="#la-firma">La Firma</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#regulacion">Marco Regulatorio</a></li>
+                    <li><a href="#cumplimiento">Cumplimiento</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -282,28 +378,32 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-tag">Agente Productor CNV</span>
-                <h1>Gestión patrimonial global con visión de futuro.</h1>
-                <p>Brindamos soluciones de inversión institucionales y corporativas, combinando tecnología de vanguardia con los más altos estándares de seguridad y seriedad del mercado.</p>
+                <span class="hero-subtitle">Agente Productor CNV</span>
+                <h1>Preservación y crecimiento patrimonial con visión institucional.</h1>
+                <p class="hero-text">Brindamos asesoramiento exclusivo para familias y corporaciones, diseñando estrategias de inversión a medida con el máximo rigor técnico y absoluta confidencialidad.</p>
+                <div class="btn-group">
+                    <a href="mailto:global@atlaswm.com.ar" class="btn btn-primary">Solicitar Entrevista</a>
+                    <a href="#servicios" class="btn btn-secondary">Descargar Brochure</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="quienes-somos">
+    <section id="la-firma">
         <div class="container">
-            <div class="about-grid">
+            <div class="firma-grid">
                 <div>
-                    <h2>Nuestra Identidad</h2>
-                    <p>En ATLAS Wealth Management nos especializamos en la estructuración y preservación del patrimonio para clientes exigentes. Entendemos que el mercado financiero actual requiere una mirada internacional y moderna.</p>
-                    <p>Nuestro enfoque se basa en pilares inquebrantables que definen cada una de nuestras operaciones bursátiles.</p>
+                    <h2>Excelencia Boutique</h2>
+                    <p>Entendemos la complejidad del patrimonio en el contexto macroeconómico actual. Nuestro enfoque se aleja de las soluciones estandarizadas, ofreciendo un servicio altamente personalizado para proteger e incrementar el capital de nuestros clientes a través de generaciones.</p>
+                    <p>En Atlas Wealth Management, estructuramos carteras eficientes enfocadas en la preservación del valor, operando bajo estrictos estándares fiduciarios.</p>
                 </div>
                 <div>
-                    <ul class="values-list">
-                        <li>Modernidad y visión de Futuro</li>
-                        <li>Alcance Global e Internacional</li>
-                        <li>Integración de Tecnología Financiera</li>
-                        <li>Seriedad y Confianza absoluta</li>
-                        <li>Seguridad en cada transacción</li>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy-blue);">Señales de Confianza</h3>
+                    <ul class="trust-signals">
+                        <li><strong>Arquitectura abierta y objetividad:</strong> Selección imparcial de los mejores instrumentos del mercado sin sesgos de producto propio.</li>
+                        <li><strong>Confidencialidad absoluta:</strong> Estricta reserva y discreción en el manejo de la información y estructura patrimonial del cliente.</li>
+                        <li><strong>Alineación de intereses:</strong> Nuestro modelo de servicio está diseñado para crecer únicamente cuando el patrimonio de nuestro cliente prospera.</li>
+                        <li><strong>Rigor normativo:</strong> Apego total a las regulaciones vigentes y a las mejores prácticas de la industria financiera local e internacional.</li>
                     </ul>
                 </div>
             </div>
@@ -312,51 +412,65 @@
 
     <section id="servicios">
         <div class="container">
-            <h2>Nuestros Servicios</h2>
+            <h2>Proceso de Gestión Patrimonial</h2>
+            <p style="max-width: 600px;">Implementamos una metodología institucional enfocada en la entrega de resultados concretos y trazables, acompañando al inversor en cada etapa de su ciclo financiero.</p>
+            
             <div class="services-grid">
-                <div class="service-card">
-                    <h3>Wealth Management</h3>
-                    <p>Diseño de portafolios a medida, alineados a los objetivos de riesgo y retorno de cada cliente, con monitoreo activo y rebalanceo estratégico.</p>
+                <div class="service-item">
+                    <h3>1. Diagnóstico Patrimonial</h3>
+                    <p>Realizamos un análisis profundo de su estructura financiera actual, evaluando la exposición al riesgo, liquidez, requerimientos fiscales y objetivos de mediano y largo plazo.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Mercados Globales</h3>
-                    <p>Acceso directo a las principales plazas financieras internacionales, permitiendo una diversificación real del patrimonio corporativo y personal.</p>
+                <div class="service-item">
+                    <h3>2. Política de Inversión (IPS)</h3>
+                    <p>Diseñamos y documentamos un <em>Investment Policy Statement</em> a medida, definiendo claramente la estrategia de asignación de activos (Asset Allocation) y los parámetros de riesgo aceptables.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Asesoramiento Corporativo</h3>
-                    <p>Soluciones integrales de financiamiento e inversión en el mercado de capitales para empresas, optimizando la liquidez y el rendimiento.</p>
+                <div class="service-item">
+                    <h3>3. Seguimiento y Rebalanceo</h3>
+                    <p>Efectuamos un monitoreo activo de las carteras frente a los cambios en los ciclos económicos, ejecutando rebalanceos tácticos para mantener la alineación con la política de inversión acordada.</p>
+                </div>
+                <div class="service-item">
+                    <h3>4. Reportes Consolidados</h3>
+                    <p>Provisión periódica de informes detallados que permiten una visualización clara del rendimiento de la cartera, los costos asociados y la exposición global del patrimonio.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="regulacion">
+    <section id="cumplimiento">
         <div class="container">
-            <h2>Marco Regulatorio y Transparencia</h2>
-            <p>Operamos bajo la estricta supervisión de la <strong>Comisión Nacional de Valores (CNV)</strong> de la República Argentina, actuando en calidad de Agente Productor.</p>
-            <p>El estricto cumplimiento normativo es la base de nuestra relación con los clientes, garantizando total transparencia, trazabilidad y protección del inversor en cada etapa del proceso de inversión.</p>
+            <div class="compliance-box">
+                <h2>Cumplimiento y Transparencia</h2>
+                <p>Atlas Wealth Management opera bajo el estricto marco regulatorio de la Comisión Nacional de Valores (CNV) de la República Argentina, en calidad de Agente Productor.</p>
+                
+                <ul class="disclaimer-list">
+                    <li><strong>Contenido puramente informativo:</strong> La información contenida en este sitio web no constituye una oferta, invitación o solicitud para la compra o venta de valores negociables, ni debe interpretarse como asesoramiento legal, fiscal o contable.</li>
+                    <li><strong>Advertencia de riesgo:</strong> Las inversiones en el mercado de capitales están sujetas a fluctuaciones de mercado. Rendimiento pasado no garantiza resultados futuros. Existe el riesgo de pérdida del capital invertido.</li>
+                    <li><strong>Ejecución y Custodia:</strong> Atlas Wealth Management no recibe ni custodia fondos ni valores negociables de los clientes. La ejecución y custodia de los activos se realiza de manera exclusiva y directa a través de Agentes de Liquidación y Compensación (ALyCs) y entidades financieras debidamente habilitadas por el regulador.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="contacto">
-        <div class="container contact-wrapper">
-            <h2>Hablemos de su patrimonio</h2>
-            <p>Nuestro equipo de asesores financieros está a su disposición para agendar una reunión institucional confidencial y evaluar las mejores estrategias para sus objetivos.</p>
-            <a href="mailto:contacto@atlaswealth.com.ar" class="contact-btn">Contactar a un Asesor</a>
+        <div class="container">
+            <h2>Agende una Reunión</h2>
+            <p>Comuníquese con nosotros para explorar cómo podemos asistirle en la gestión y preservación de su patrimonio.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:global@atlaswm.com.ar" class="contact-email">global@atlaswm.com.ar</a>
+                <strong>CABA, Argentina</strong>
+                <span style="font-size: 0.9rem; color: var(--text-gray);">(Atención exclusiva con cita previa)</span>
+            </div>
+
+            <a href="mailto:global@atlaswm.com.ar" class="btn btn-primary">Solicitar Entrevista Institucional</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="logo">
-                <span class="logo-delta">Δ</span> ATLAS WEALTH MANAGEMENT
-            </div>
-            <div class="footer-legal">
-                <p><strong>ATLAS Wealth Management</strong> es una marca registrada. Actuamos como Agente Productor registrado ante la Comisión Nacional de Valores (CNV) bajo la Matrícula N° [Completar Matrícula].</p>
-                <br>
-                <p>La información contenida en este sitio web tiene propósitos puramente informativos y no constituye una oferta, recomendación o solicitud para comprar o vender valores u otros instrumentos financieros. Las inversiones en el mercado de capitales conllevan riesgos, incluyendo la posible pérdida del capital invertido. Rendimientos pasados no son garantía de rendimientos futuros.</p>
-                <br>
-                <p>&copy; 2026 Atlas Wealth Management. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-logo"><span class="logo-delta">Δ</span> ATLAS</div>
+                <div>&copy; 2026 Atlas Wealth Management. Todos los derechos reservados.</div>
             </div>
         </div>
     </footer>
