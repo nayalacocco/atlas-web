@@ -1,32 +1,23 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}"
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        graphite: "#13161D",
-        charcoal: "#1A1E27",
-        stone: "#E7E2D8",
-        parchment: "#F7F4EE",
-        smoke: "#E3E0D8",
-        mist: "#A8AFBF",
-        navy: "#2E3A52",
-        gold: "#A78B60"
+        ink: "#10131A",
+        panel: "#171C25",
+        "panel-soft": "#151A23",
+        warm: "#E8E1D4",
+        ivory: "#EEE9DE",
+        slate: "#A4ADBD",
+        "accent-navy": "#2C3954",
+        "accent-gold": "#A08862",
+        "premium-line": "rgba(238, 233, 222, 0.16)"
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "serif"],
-        sans: ["var(--font-manrope)", "sans-serif"]
-      },
-      boxShadow: {
-        line: "0 0 0 1px rgba(227, 224, 216, 0.15)"
-      },
-      backgroundImage: {
-        grain:
-          "radial-gradient(circle at 1px 1px, rgba(227,224,216,0.05) 1px, transparent 0)"
+        sans: ["Inter", "Avenir Next", "Segoe UI", "sans-serif"],
+        serif: ["Iowan Old Style", "Baskerville", "Times New Roman", "serif"]
       }
     }
   },
