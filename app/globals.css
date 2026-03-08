@@ -6,24 +6,59 @@
   color-scheme: dark;
 }
 
+html,
 body {
-  background-color: #13161d;
-  background-image: radial-gradient(circle at 15% 10%, rgba(167, 139, 96, 0.16), transparent 28%),
-    radial-gradient(circle at 82% 4%, rgba(46, 58, 82, 0.4), transparent 38%);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.section-shell {
-  @apply mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16;
+body {
+  background-color: #10131a;
+  background-image:
+    radial-gradient(circle at 14% 12%, rgba(160, 136, 98, 0.14), transparent 34%),
+    radial-gradient(circle at 86% 2%, rgba(36, 49, 73, 0.35), transparent 30%),
+    linear-gradient(180deg, #10131a 0%, #0f1218 100%);
 }
 
-.section-label {
-  @apply text-xs uppercase tracking-[0.26em] text-mist;
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16;
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.26em] text-slate;
+  }
+
+  .section-title {
+    @apply mt-4 font-serif text-3xl leading-tight text-ivory sm:text-4xl lg:text-5xl;
+  }
+
+  .section-copy {
+    @apply mt-5 max-w-3xl text-base leading-relaxed text-slate;
+  }
+
+  .section-gap {
+    @apply mt-24;
+  }
+
+  .section-divider {
+    @apply border-t border-premium-line;
+  }
+
+  .section-divider-y {
+    @apply border-y border-premium-line;
+  }
+
+  .btn-primary {
+    @apply rounded-full bg-warm px-7 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition-all duration-300 hover:bg-accent-gold;
+  }
+
+  .btn-secondary {
+    @apply rounded-full border border-premium-line px-7 py-3 text-xs uppercase tracking-[0.18em] text-ivory transition-all duration-300 hover:border-accent-gold hover:text-accent-gold;
+  }
 }
 
-.section-title {
-  @apply mt-4 font-serif text-3xl leading-tight text-smoke sm:text-4xl lg:text-5xl;
-}
-
-.section-copy {
-  @apply mt-5 max-w-3xl text-base leading-relaxed text-mist;
+.hero-glow {
+  background: radial-gradient(circle at top left, rgba(160, 136, 98, 0.25), transparent 54%);
+  filter: blur(14px);
 }
