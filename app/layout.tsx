@@ -1,41 +1,23 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-cormorant"
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-manrope"
-});
 
 export const metadata: Metadata = {
   title: "Atlas Wealth Management | Private Wealth Boutique",
   description:
-    "Asesoramiento patrimonial integral para familias y empresarios con criterio, discreción y visión de largo plazo.",
+    "Asesoramiento patrimonial integral para familias, empresarios y ejecutivos. Criterio, discreción y visión de largo plazo.",
+  metadataBase: new URL("https://atlaswm.com"),
   openGraph: {
     title: "Atlas Wealth Management",
-    description:
-      "Ordenar, proteger y gestionar el patrimonio con criterio y sofisticación.",
-    type: "website"
+    description: "Patrimonio con criterio, estructura y visión patrimonial de largo plazo.",
+    type: "website",
+    locale: "es_AR"
   }
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${cormorant.variable} ${manrope.variable} bg-graphite text-smoke antialiased`}>
-        {children}
-      </body>
+      <body className="bg-ink font-sans text-ivory antialiased">{children}</body>
     </html>
   );
 }
