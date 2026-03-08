@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #13161d;
+  background-image: radial-gradient(circle at 15% 10%, rgba(167, 139, 96, 0.16), transparent 28%),
+    radial-gradient(circle at 82% 4%, rgba(46, 58, 82, 0.4), transparent 38%);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-16;
+}
+
+.section-label {
+  @apply text-xs uppercase tracking-[0.26em] text-mist;
+}
+
+.section-title {
+  @apply mt-4 font-serif text-3xl leading-tight text-smoke sm:text-4xl lg:text-5xl;
+}
+
+.section-copy {
+  @apply mt-5 max-w-3xl text-base leading-relaxed text-mist;
+}
