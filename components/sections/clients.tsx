@@ -3,7 +3,7 @@ import { clientProfiles } from "@/lib/content";
 
 export function ClientsSection() {
   return (
-    <section id="clientes" className="shell section-gap grid gap-14 section-divider-y py-24 lg:grid-cols-2">
+    <section id="clientes" className="shell section-gap grid gap-14 section-divider-y py-28 lg:grid-cols-2">
       <Reveal>
         <p className="eyebrow">Para quién es</p>
         <h2 className="section-title">Relaciones selectivas para patrimonios con complejidad real.</h2>
