@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipo — Atlas Wealth Management</title>
+  <meta name="description" content="El equipo de Atlas Wealth Management combina décadas de experiencia en gestión de inversiones, wealth management y planificación patrimonial global." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .partner-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      padding: 72px 0;
+      border-bottom: 1px solid var(--light-grey);
+      align-items: start;
+    }
+    .partner-card:first-of-type { padding-top: 0; }
+    .partner-card:last-of-type { border-bottom: none; }
+    .partner-photo {
+      position: relative;
+    }
+    .partner-photo__img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-photo__img--a { background: linear-gradient(160deg, #162338 0%, #0E1A2B 100%); }
+    .partner-photo__img--b { background: linear-gradient(160deg, #1E3050 0%, #162338 100%); }
+    .partner-photo__img--c { background: linear-gradient(160deg, #0E1A2B 0%, #1a2d45 100%); }
+    .partner-photo__img--d { background: linear-gradient(160deg, #1a2d45 0%, #0E1A2B 100%); }
+    .partner-photo__initials {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-weight: 400;
+      color: rgba(247,246,244,0.18);
+    }
+    .partner-photo__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(14,26,43,0.5), transparent);
+    }
+    .partner-photo__accent {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--bronze);
+    }
+    .partner-body {}
+    .partner-name {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .partner-role {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 28px;
+    }
+    .partner-bio p {
+      margin-bottom: 18px;
+      line-height: 1.8;
+      color: var(--charcoal-mid);
+    }
+    .partner-credentials {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--light-grey);
+    }
+    .partner-credentials__title {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      margin-bottom: 14px;
+    }
+    .partner-credentials ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .partner-credentials li {
+      font-size: 0.85rem;
+      color: var(--charcoal-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .partner-credentials li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--bronze);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .partner-card { grid-template-columns: 1fr; gap: 32px; }
+      .partner-photo__img { max-width: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Atlas</span><span class="nav__logo-sub">Wealth Management</span></a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link" style="color: var(--bronze);">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="contacto.html#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>Equipo</span></nav>
+          <span class="overline">Los Socios</span>
+          <h1>El equipo detrás<br />de cada relación</h1>
+          <p class="lead">En Atlas, los socios están directamente involucrados en cada mandato. No existe una capa de juniors entre el cliente y la experiencia senior que contrata.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="section section--offwhite" style="padding-bottom: 0;">
+      <div class="container--narrow">
+        <div class="section-intro text-center fade-up">
+          <span class="overline">Nuestra Convicción</span>
+          <h2>Socios que trabajan.<br />No solo que representan.</h2>
+          <p class="lead">En las grandes firmas, los socios sénior firman el acuerdo y luego delegan. En Atlas, los socios conocen a fondo cada cliente, cada portafolio y cada decisión. Esta es una condición estructural de cómo trabajamos, no una promesa de marketing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIOS -->
+    <section class="section section--white">
+      <div class="container">
+
+        <div class="partner-card fade-up">
+          <div class="partner-photo">
+            <div class="partner-photo__img partner-photo__img--a">
+              <div class="partner-photo__initials">NA</div>
+              <div class="partner-photo__overlay"></div>
+            </div>
+            <div class="partner-photo__accent"></div>
+          </div>
+          <div class="partner-body">
+            <div class="partner-name">Nehuen Adonis Ayala Cocco</div>
+            <div class="partner-role">Socio Fundador &amp; Chief Investment Officer</div>
+            <div class="partner-bio">
+              <p>Licenciado en Economía y Máster en Finanzas por la Universidad Torcuato Di Tella. Es Idóneo en Mercado de Capitales, certificado por la CNV. Cuenta con experiencia en asesoramiento financiero, valuación de compañías y desarrollo de inversiones tanto en mercados financieros como en activos reales.</p>
+              <p>Su enfoque combina mercados financieros, real estate y negocios de economía real con una visión patrimonial de largo plazo. Considera que un patrimonio sólido se construye mediante una arquitectura de inversión diversificada y coherente en el tiempo.</p>
+            </div>
+            <div class="partner-credentials">
+              <div class="partner-credentials__title">Formación y credenciales</div>
+              <ul>
+                <li>Máster en Finanzas — Universidad Torcuato Di Tella</li>
+                <li>Licenciatura en Economía — Universidad Torcuato Di Tella</li>
+                <li>Idóneo en Mercado de Capitales — CNV</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-card fade-up">
+          <div class="partner-photo">
+            <div class="partner-photo__img partner-photo__img--b">
+              <div class="partner-photo__initials">FA</div>
+              <div class="partner-photo__overlay"></div>
+            </div>
+            <div class="partner-photo__accent"></div>
+          </div>
+          <div class="partner-body">
+            <div class="partner-name">Fernando Ricardo Alvarez de la Viesca</div>
+            <div class="partner-role">Socio Fundador</div>
+          </div>
+        </div>
+
+        <div class="partner-card fade-up">
+          <div class="partner-photo">
+            <div class="partner-photo__img partner-photo__img--c">
+              <div class="partner-photo__initials">FB</div>
+              <div class="partner-photo__overlay"></div>
+            </div>
+            <div class="partner-photo__accent"></div>
+          </div>
+          <div class="partner-body">
+            <div class="partner-name">Federico Thomas Belizan</div>
+            <div class="partner-role">Socio Fundador</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VALORES DEL EQUIPO -->
+    <section class="section section--navy">
+      <div class="container--narrow">
+        <div class="section-intro section-intro--center fade-up">
+          <span class="overline">Nuestro Compromiso</span>
+          <h2>Lo que puede esperar<br />de cada uno de nosotros</h2>
+        </div>
+        <div class="grid-2" style="gap: 40px; margin-top: 48px;">
+          <div class="fade-up fade-up--delay-1" style="padding: 32px 28px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="width: 24px; height: 1px; background: var(--bronze); margin-bottom: 18px;"></div>
+            <h4 style="margin-bottom: 12px; font-size: 1rem;">Acceso directo a los socios</h4>
+            <p style="font-size: 0.88rem;">Cada cliente tiene acceso directo a los socios que llevan su mandato. No existe ningún intermediario entre usted y la experiencia que contrata.</p>
+          </div>
+          <div class="fade-up fade-up--delay-2" style="padding: 32px 28px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="width: 24px; height: 1px; background: var(--bronze); margin-bottom: 18px;"></div>
+            <h4 style="margin-bottom: 12px; font-size: 1rem;">Continuidad en la relación</h4>
+            <p style="font-size: 0.88rem;">Los socios de Atlas son co-propietarios de la firma. Esto garantiza una alineación de intereses y una continuidad que las firmas corporativas rara vez pueden ofrecer.</p>
+          </div>
+          <div class="fade-up fade-up--delay-3" style="padding: 32px 28px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="width: 24px; height: 1px; background: var(--bronze); margin-bottom: 18px;"></div>
+            <h4 style="margin-bottom: 12px; font-size: 1rem;">Comunicación proactiva</h4>
+            <p style="font-size: 0.88rem;">No esperamos a que usted nos contacte cuando algo ocurre en los mercados. Nos comunicamos proactivamente cuando el contexto requiere una conversación.</p>
+          </div>
+          <div class="fade-up" style="padding: 32px 28px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="width: 24px; height: 1px; background: var(--bronze); margin-bottom: 18px;"></div>
+            <h4 style="margin-bottom: 12px; font-size: 1rem;">Honestidad sobre los límites</h4>
+            <p style="font-size: 0.88rem;">Le diremos lo que no sabemos, cuándo un tema excede nuestra expertise y cuándo recomendamos buscar perspectiva adicional. La honestidad sobre los límites propios es parte del servicio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner">
+          <span class="overline" style="color: var(--bronze-pale);">Contacto</span>
+          <h2>Conózcanos en persona</h2>
+          <p class="lead">Una primera conversación no tiene ningún compromiso. Nos permite conocerle y evaluar si existe una afinidad genuina con nuestra forma de trabajar.</p>
+          <a href="contacto.html" class="btn btn--primary">Solicitar una reunión</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos.</p>
+        </div>
+        <div><div class="footer__col-title">La Firma</div><ul class="footer__nav"><li><a href="nuestra-firma.html">Nuestra Firma</a></li><li><a href="nuestra-firma.html#valores">Valores</a></li><li><a href="nuestra-firma.html#independencia">Independencia</a></li></ul></div>
+        <div><div class="footer__col-title">Servicios</div><ul class="footer__nav"><li><a href="que-hacemos.html#inversiones">Inversiones</a></li><li><a href="que-hacemos.html#advisory">Advisory</a></li><li><a href="que-hacemos.html#family-office">Family Office</a></li></ul></div>
+        <div><div class="footer__col-title">Perspectivas</div><ul class="footer__nav"><li><a href="insights.html">Insights</a></li><li><a href="nuestro-enfoque.html">Nuestro Enfoque</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__nav"><li><a href="contacto.html#privacidad">Privacidad</a></li><li><a href="contacto.html#legal">Aviso Legal</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management. <a href="contacto.html#privacidad">Privacidad</a> &middot; <a href="contacto.html#legal">Legal</a></p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer"><p>La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye asesoramiento financiero personalizado.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

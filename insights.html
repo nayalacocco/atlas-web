@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Atlas Wealth Management</title>
+  <meta name="description" content="Perspectivas, análisis e ideas sobre inversión, gestión patrimonial y mercados globales desde Atlas Wealth Management." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .insight-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: var(--white);
+      margin-bottom: 2px;
+    }
+    .insight-featured__visual {
+      aspect-ratio: unset;
+      min-height: 420px;
+      background: linear-gradient(135deg, #0E1A2B 0%, #1E3050 100%);
+      position: relative;
+    }
+    .insight-featured__visual-accent {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 3px;
+      background: var(--bronze);
+    }
+    .insight-featured__body {
+      padding: 60px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .insight-featured__tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 16px;
+    }
+    .insight-featured__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+    .insight-featured__excerpt {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--charcoal-mid);
+      margin-bottom: 32px;
+    }
+    .insight-featured__meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--warm-grey);
+    }
+    .insight-featured__meta-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--mid-grey);
+    }
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .insight-list-item {
+      background: var(--white);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background var(--transition-fast);
+    }
+    .insight-list-item:hover {
+      background: var(--off-white);
+    }
+    .insight-list-item__tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+    }
+    .insight-list-item__title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--navy);
+      line-height: 1.4;
+      flex: 1;
+    }
+    .insight-list-item__excerpt {
+      font-size: 0.85rem;
+      color: var(--charcoal-mid);
+      line-height: 1.65;
+    }
+    .insight-list-item__meta {
+      font-size: 0.75rem;
+      color: var(--warm-grey);
+      margin-top: 8px;
+    }
+    .carta-card {
+      background: var(--navy);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(160,123,79,0.1) 0%, transparent 60%);
+    }
+    .carta-card__inner {
+      position: relative;
+      z-index: 1;
+    }
+    .carta-card__label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bronze-pale);
+      margin-bottom: 16px;
+    }
+    .carta-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--off-white);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+    .carta-card__excerpt {
+      font-size: 0.85rem;
+      color: rgba(247,246,244,0.6);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .insight-featured { grid-template-columns: 1fr; }
+      .insight-featured__visual { min-height: 240px; }
+      .insight-featured__body { padding: 40px 32px; }
+      .insight-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Atlas</span><span class="nav__logo-sub">Wealth Management</span></a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link" style="color: var(--bronze);">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="contacto.html#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>Insights</span></nav>
+          <span class="overline">Perspectivas Atlas</span>
+          <h1>Reflexiones sobre<br />inversión y patrimonio</h1>
+          <p class="lead">Compartimos nuestras perspectivas sobre los mercados, la gestión patrimonial y los principios que guían el pensamiento de largo plazo.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURED -->
+    <section class="section section--offwhite" style="padding-top: 60px;">
+      <div class="container">
+        <div class="section-intro fade-up" style="margin-bottom: 36px;">
+          <span class="overline">Destacado</span>
+          <h2>Lectura recomendada</h2>
+        </div>
+        <div class="insight-featured fade-up">
+          <div class="insight-featured__visual">
+            <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 70%, rgba(160,123,79,0.1) 0%, transparent 55%);"></div>
+            <div class="insight-featured__visual-accent"></div>
+          </div>
+          <div class="insight-featured__body">
+            <div class="insight-featured__tag">Carta Atlas — Q1 2025</div>
+            <h2 class="insight-featured__title">El tiempo como activo: reflexiones sobre paciencia y disciplina en mercados inciertos</h2>
+            <p class="insight-featured__excerpt">En un entorno de alta volatilidad e incertidumbre macro, la tentación de reaccionar es constante. Sin embargo, la historia de los mercados financieros sugiere reiteradamente que la paciencia estructural supera consistentemente a la actividad reactiva.</p>
+            <div class="insight-featured__meta">
+              <span>Ricardo Montoya</span>
+              <span class="insight-featured__meta-dot"></span>
+              <span>Marzo 2025</span>
+              <span class="insight-featured__meta-dot"></span>
+              <span>12 min lectura</span>
+            </div>
+            <a href="#" class="btn-arrow" style="margin-top: 24px;">Leer perspectiva</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSPECTIVAS DE MERCADO -->
+    <section class="section section--white" id="perspectivas">
+      <div class="container">
+        <div class="section-intro" style="margin-bottom: 36px;" class="fade-up">
+          <span class="overline">Perspectivas de Mercado</span>
+          <h2>Análisis y contexto global</h2>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-list-item fade-up fade-up--delay-1">
+            <div class="insight-list-item__tag">Perspectivas de Mercado</div>
+            <div class="insight-list-item__title">Navegando ciclos globales: dónde estamos y qué esperar</div>
+            <div class="insight-list-item__excerpt">Una lectura del ciclo económico global, las divergencias entre regiones y las implicaciones para la asignación de activos en 2025.</div>
+            <div class="insight-list-item__meta">Alejandro Vargas &nbsp;·&nbsp; Enero 2025</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+          <article class="insight-list-item fade-up fade-up--delay-2">
+            <div class="insight-list-item__tag">Perspectivas de Mercado</div>
+            <div class="insight-list-item__title">Tasas de interés y patrimonio: el nuevo escenario para el capital privado</div>
+            <div class="insight-list-item__excerpt">Cómo el cambio en el régimen de tipos de interés afecta la construcción de portafolios y la valoración de activos privados.</div>
+            <div class="insight-list-item__meta">Ricardo Montoya &nbsp;·&nbsp; Diciembre 2024</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+          <article class="insight-list-item fade-up fade-up--delay-3">
+            <div class="insight-list-item__tag">Perspectivas de Mercado</div>
+            <div class="insight-list-item__title">Mercados emergentes en un mundo fragmentado: riesgo y oportunidad</div>
+            <div class="insight-list-item__excerpt">La fragmentación geopolítica está redefiniendo el riesgo en mercados emergentes. Un análisis de las implicaciones para inversores de largo plazo.</div>
+            <div class="insight-list-item__meta">Alejandro Vargas &nbsp;·&nbsp; Noviembre 2024</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVERSIÓN DE LARGO PLAZO -->
+    <section class="section section--offwhite" id="largo-plazo">
+      <div class="container">
+        <div class="section-intro" style="margin-bottom: 36px;" class="fade-up">
+          <span class="overline">Inversión de Largo Plazo</span>
+          <h2>Principios que perduran</h2>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-list-item fade-up fade-up--delay-1" style="background: var(--white);">
+            <div class="insight-list-item__tag">Inversión de Largo Plazo</div>
+            <div class="insight-list-item__title">La disciplina del capital permanente: por qué el horizonte lo cambia todo</div>
+            <div class="insight-list-item__excerpt">Un argumento sobre cómo el horizonte temporal de inversión determina no solo la estrategia, sino la definición misma del riesgo.</div>
+            <div class="insight-list-item__meta">Ricardo Montoya &nbsp;·&nbsp; Febrero 2025</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+          <article class="insight-list-item fade-up fade-up--delay-2" style="background: var(--white);">
+            <div class="insight-list-item__tag">Inversión de Largo Plazo</div>
+            <div class="insight-list-item__title">Concentración versus diversificación: la tensión permanente del inversor privado</div>
+            <div class="insight-list-item__excerpt">La concentración puede crear riqueza; la diversificación la preserva. Cómo navegar esta tensión fundamental en cada etapa del ciclo patrimonial.</div>
+            <div class="insight-list-item__meta">Sofía Castellanos &nbsp;·&nbsp; Octubre 2024</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+          <article class="insight-list-item fade-up fade-up--delay-3" style="background: var(--white);">
+            <div class="insight-list-item__tag">Inversión de Largo Plazo</div>
+            <div class="insight-list-item__title">El costo real de intentar predecir mercados</div>
+            <div class="insight-list-item__excerpt">Un análisis cuantitativo y cualitativo del costo de oportunidad de la gestión market-timing versus la inversión estructural disciplinada.</div>
+            <div class="insight-list-item__meta">Alejandro Vargas &nbsp;·&nbsp; Septiembre 2024</div>
+            <a href="#" class="btn-arrow" style="font-size: 0.72rem; margin-top: 4px;">Leer más</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTAS ATLAS -->
+    <section class="section section--white" id="cartas">
+      <div class="container">
+        <div class="section-intro" style="margin-bottom: 36px;" class="fade-up">
+          <span class="overline">Cartas Atlas</span>
+          <h2>Perspectiva trimestral</h2>
+          <p class="lead" style="max-width: 560px;">Las Cartas Atlas son nuestra reflexión trimestral sobre el estado de los mercados, la economía global y los principios que guían nuestra forma de pensar el patrimonio a largo plazo.</p>
+        </div>
+        <div class="grid-3" style="gap: 2px;">
+          <div class="carta-card fade-up fade-up--delay-1">
+            <div class="carta-card__inner">
+              <div class="carta-card__label">Carta Atlas — Q1 2025</div>
+              <div class="carta-card__title">El tiempo como activo: disciplina en mercados inciertos</div>
+              <div class="carta-card__excerpt">Reflexiones sobre paciencia, volatilidad y por qué las mejores decisiones de inversión suelen ser las que no se toman.</div>
+              <a href="#" class="btn-arrow btn-arrow--white" style="font-size: 0.72rem;">Leer carta</a>
+            </div>
+          </div>
+          <div class="carta-card fade-up fade-up--delay-2">
+            <div class="carta-card__inner">
+              <div class="carta-card__label">Carta Atlas — Q4 2024</div>
+              <div class="carta-card__title">El futuro del patrimonio multigeneracional</div>
+              <div class="carta-card__excerpt">Cómo los cambios demográficos, tecnológicos y geopolíticos están redefiniendo los desafíos del patrimonio familiar en las próximas décadas.</div>
+              <a href="#" class="btn-arrow btn-arrow--white" style="font-size: 0.72rem;">Leer carta</a>
+            </div>
+          </div>
+          <div class="carta-card fade-up fade-up--delay-3">
+            <div class="carta-card__inner">
+              <div class="carta-card__label">Carta Atlas — Q3 2024</div>
+              <div class="carta-card__title">Independencia de criterio en tiempos de ruido</div>
+              <div class="carta-card__excerpt">En un mundo de información instantánea y opiniones constantes, la habilidad de mantener perspectiva propia se ha convertido en ventaja competitiva.</div>
+              <a href="#" class="btn-arrow btn-arrow--white" style="font-size: 0.72rem;">Leer carta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUSCRIPCIÓN -->
+    <section class="section section--offwhite">
+      <div class="container--narrow">
+        <div style="text-align: center;" class="fade-up">
+          <span class="overline">Perspectivas Atlas</span>
+          <h2 style="margin-top: 16px; margin-bottom: 20px;">Reciba nuestras perspectivas</h2>
+          <p class="lead" style="margin-bottom: 40px;">Las Cartas Atlas y nuestros análisis se distribuyen trimestralmente a clientes y profesionales interesados en el pensamiento de largo plazo sobre mercados y patrimonio.</p>
+          <div style="display: flex; gap: 0; max-width: 480px; margin: 0 auto;">
+            <input type="email" placeholder="Su dirección de email" style="flex: 1; padding: 14px 20px; font-family: var(--font-sans); font-size: 0.9rem; border: 1px solid var(--light-grey); outline: none; background: var(--white);" />
+            <button class="btn btn--primary" style="white-space: nowrap;">Suscribirse</button>
+          </div>
+          <p style="font-size: 0.75rem; color: var(--warm-grey); margin-top: 16px;">Tratamos su información con confidencialidad. Sin spam. Con posibilidad de baja en cualquier momento.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos.</p>
+        </div>
+        <div><div class="footer__col-title">La Firma</div><ul class="footer__nav"><li><a href="nuestra-firma.html">Nuestra Firma</a></li><li><a href="nuestra-firma.html#valores">Valores</a></li><li><a href="nuestra-firma.html#independencia">Independencia</a></li></ul></div>
+        <div><div class="footer__col-title">Servicios</div><ul class="footer__nav"><li><a href="que-hacemos.html#inversiones">Inversiones</a></li><li><a href="que-hacemos.html#advisory">Advisory</a></li><li><a href="que-hacemos.html#family-office">Family Office</a></li></ul></div>
+        <div><div class="footer__col-title">Perspectivas</div><ul class="footer__nav"><li><a href="#perspectivas">Perspectivas Mercado</a></li><li><a href="#largo-plazo">Inversión L.P.</a></li><li><a href="#cartas">Cartas Atlas</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__nav"><li><a href="contacto.html#privacidad">Privacidad</a></li><li><a href="contacto.html#legal">Aviso Legal</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management. <a href="contacto.html#privacidad">Privacidad</a> &middot; <a href="contacto.html#legal">Legal</a></p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer"><p>Las perspectivas y análisis publicados en este sitio reflejan la opinión de sus autores en el momento de publicación y no constituyen asesoramiento financiero personalizado.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

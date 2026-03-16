@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Atlas Wealth Management</title>
+  <meta name="description" content="Inicie una conversación con Atlas Wealth Management. Las mejores relaciones comienzan con una conversación honesta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 600px;
+    }
+    .contact-info {
+      padding: 80px 72px 80px 0;
+    }
+    .contact-info h2 {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+    .contact-info .lead {
+      margin-bottom: 48px;
+    }
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+    .contact-detail__label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+    }
+    .contact-detail__value {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+    .contact-form-panel {
+      background: var(--white);
+      padding: 72px 64px;
+      border-left: 1px solid var(--light-grey);
+    }
+    .contact-form-panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .contact-form-panel .lead {
+      margin-bottom: 36px;
+      font-size: 0.9rem;
+    }
+    .form-success {
+      display: none;
+      background: #f0f7f0;
+      border: 1px solid #c3ddc3;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+    .form-success p {
+      font-size: 0.88rem;
+      color: #2A5C3F;
+    }
+    .legal-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--light-grey);
+    }
+    .legal-block {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .legal-block:last-child { border-bottom: none; }
+    .legal-block h3 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .legal-block p {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--charcoal-mid);
+      max-width: 700px;
+    }
+    /* Client Login Placeholder */
+    .login-panel {
+      background: var(--navy);
+      padding: 80px 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .login-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(160,123,79,0.08), transparent 60%);
+    }
+    .login-panel__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 400px;
+    }
+    .login-panel h2 {
+      color: var(--off-white);
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    .login-panel .lead {
+      color: rgba(247,246,244,0.6);
+      margin-bottom: 40px;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--off-white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .login-form input::placeholder { color: rgba(247,246,244,0.35); }
+    .login-form input:focus { border-color: var(--bronze); }
+    .login-note {
+      font-size: 0.75rem;
+      color: rgba(247,246,244,0.4);
+      margin-top: 8px;
+    }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-info { padding: 40px 0; }
+      .contact-form-panel { padding: 40px 24px; border-left: none; border-top: 1px solid var(--light-grey); }
+      .login-panel { padding: 60px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Atlas</span><span class="nav__logo-sub">Wealth Management</span></a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link" style="color: var(--bronze);">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>Contacto</span></nav>
+          <span class="overline">Iniciar una Conversación</span>
+          <h1>Las relaciones comienzan<br />con una conversación</h1>
+          <p class="lead">Trabajamos con un número limitado de clientes para asegurar profundidad de relación, alineación y calidad de asesoramiento. Si considera que existe una afinidad, nos gustaría conocerle.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="section section--offwhite">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Info -->
+          <div class="contact-info fade-up">
+            <span class="overline">Cómo Conectar</span>
+            <h2>Una primera conversación<br />sin compromiso</h2>
+            <p class="lead">La primera reunión es una conversación de escucha mutua. Nos interesa entender su situación; usted, conocernos. No existen presentaciones de producto ni propuestas hasta que haya un entendimiento genuino de su contexto.</p>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Email</span>
+              <span class="contact-detail__value">contacto@atlaswm.com</span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Teléfono</span>
+              <span class="contact-detail__value">+1 (305) 000-0000</span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Oficinas</span>
+              <span class="contact-detail__value">Miami, Florida — Estados Unidos<br />Ciudad de México — México</span>
+            </div>
+
+            <div class="contact-detail">
+              <span class="contact-detail__label">Atención</span>
+              <span class="contact-detail__value">Lunes a viernes, 9:00 — 18:00 ET</span>
+            </div>
+
+            <div style="margin-top: 40px; padding: 28px 32px; background: var(--white); border-left: 2px solid var(--bronze);">
+              <p style="font-family: var(--font-serif); font-style: italic; font-size: 1rem; color: var(--navy); line-height: 1.6;">"Antes de hablar de estrategia o portafolios, queremos entender quién es usted, qué ha construido y qué quiere preservar. Esa es la conversación que importa."</p>
+              <p style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bronze); margin-top: 12px;">— Equipo Atlas</p>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form-panel fade-up">
+            <h3>Envíenos un mensaje</h3>
+            <p class="lead">Cuéntenos brevemente sobre su situación y cómo podemos ayudarle. Responderemos personalmente en 24-48 horas hábiles.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="contact-form">
+                <div class="contact-form__row">
+                  <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Su apellido" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="su@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono (opcional)</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="+1 000 000 0000" />
+                </div>
+                <div class="form-group">
+                  <label for="perfil">Perfil</label>
+                  <select id="perfil" name="perfil">
+                    <option value="">Seleccione su perfil…</option>
+                    <option>Emprendedor / Fundador</option>
+                    <option>Familia Multi-Generacional</option>
+                    <option>Family Office</option>
+                    <option>Institución</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntenos brevemente su situación y cómo podemos ayudarle…"></textarea>
+                </div>
+                <p class="form-note">Su información es tratada con absoluta confidencialidad. No compartimos datos con terceros. Esta comunicación no constituye un acuerdo de asesoramiento.</p>
+                <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Enviar mensaje</button>
+                <div class="form-success" id="formSuccess">
+                  <p>Su mensaje ha sido enviado correctamente. Nos pondremos en contacto con usted en las próximas 24-48 horas hábiles. Gracias por su interés en Atlas.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGIN -->
+    <section class="section--navy" id="login" style="padding: 0;">
+      <div class="login-panel" style="padding: 100px 40px;">
+        <div class="login-panel__inner">
+          <span class="overline" style="color: var(--bronze-pale);">Acceso Clientes</span>
+          <h2>Portal Cliente</h2>
+          <p class="lead">Acceda a su portal personalizado para consultar reportes, portafolios y comunicaciones de su equipo Atlas.</p>
+          <form class="login-form" onsubmit="return false;">
+            <input type="email" placeholder="Email" autocomplete="email" />
+            <input type="password" placeholder="Contraseña" autocomplete="current-password" />
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Acceder al portal</button>
+          </form>
+          <p class="login-note" style="margin-top: 20px;">¿Problemas de acceso? Contacte a su advisor directamente.<br />Portal operado por tercero autorizado y regulado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGAL -->
+    <section class="section section--white" id="legal">
+      <div class="container--narrow">
+        <div class="section-intro fade-up">
+          <span class="overline">Marco Legal</span>
+          <h2>Información legal y regulatoria</h2>
+        </div>
+
+        <div id="privacidad">
+          <div class="legal-block fade-up">
+            <h3>Política de Privacidad</h3>
+            <p>Atlas Wealth Management se compromete a proteger la privacidad y confidencialidad de la información de sus clientes y visitantes. Los datos personales proporcionados a través de este sitio web o en el curso de una relación de asesoramiento son tratados con la máxima confidencialidad y no son compartidos con terceros sin el consentimiento explícito del titular, salvo que sea requerido por ley o por autoridades regulatorias competentes.</p>
+            <p style="margin-top: 14px;">Los datos recopilados se utilizan exclusivamente para la prestación de servicios de asesoramiento patrimonial, comunicaciones relacionadas con el servicio y el cumplimiento de obligaciones legales y regulatorias. Usted tiene derecho a solicitar acceso, rectificación, supresión o portabilidad de sus datos en cualquier momento dirigiéndose a privacidad@atlaswm.com.</p>
+          </div>
+        </div>
+
+        <div id="regulacion">
+          <div class="legal-block fade-up">
+            <h3>Información Regulatoria</h3>
+            <p>Atlas Wealth Management LLC es una firma de asesoramiento de inversiones registrada en los Estados Unidos. El asesoramiento de inversiones es prestado de conformidad con las regulaciones aplicables en las jurisdicciones en las que operamos. El registro como asesor de inversiones no implica un nivel de habilidad o formación determinado.</p>
+            <p style="margin-top: 14px;">Para clientes en otras jurisdicciones, la prestación de servicios está sujeta a los requisitos regulatorios locales aplicables. Consulte con su asesor los términos específicos aplicables a su situación.</p>
+          </div>
+        </div>
+
+        <div class="legal-block fade-up">
+          <h3>Aviso Legal y Disclaimer</h3>
+          <p>La información contenida en este sitio web tiene carácter exclusivamente informativo y no constituye, ni debe interpretarse como, una oferta o recomendación de inversión, asesoramiento financiero, fiscal o legal personalizado, ni como una invitación a realizar cualquier tipo de transacción financiera.</p>
+          <p style="margin-top: 14px;">Las inversiones en mercados financieros conllevan riesgos significativos, incluyendo la posible pérdida total o parcial del capital invertido. El rendimiento pasado de una inversión no garantiza ni predice resultados futuros. Antes de tomar cualquier decisión de inversión, considere sus objetivos financieros, tolerancia al riesgo, horizonte temporal y situación personal. Atlas Wealth Management recomienda consultar con asesores legales y fiscales independientes sobre aspectos regulatorios y tributarios específicos.</p>
+          <p style="margin-top: 14px;">Determinados productos o servicios descritos en este sitio pueden no estar disponibles en todas las jurisdicciones o para todos los tipos de inversores.</p>
+        </div>
+
+        <div class="legal-block fade-up">
+          <h3>Conflictos de Interés</h3>
+          <p>Atlas Wealth Management opera como firma de asesoramiento independiente y es remunerada exclusivamente mediante honorarios acordados con sus clientes. No recibimos retrocesiones, comisiones ni ningún otro tipo de remuneración de terceros como resultado de los productos o servicios que recomendamos. Divulgamos proactivamente cualquier potencial conflicto de interés a nuestros clientes.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos. Una firma construida sobre confianza, disciplina y perspectiva global.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">La Firma</div>
+          <ul class="footer__nav">
+            <li><a href="nuestra-firma.html">Nuestra Firma</a></li>
+            <li><a href="nuestra-firma.html#valores">Valores</a></li>
+            <li><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Servicios</div>
+          <ul class="footer__nav">
+            <li><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li><a href="que-hacemos.html#family-office">Family Office</a></li>
+            <li><a href="nuestro-enfoque.html">Nuestro Enfoque</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Perspectivas</div>
+          <ul class="footer__nav">
+            <li><a href="insights.html#perspectivas">Perspectivas Mercado</a></li>
+            <li><a href="insights.html#largo-plazo">Inversión L.P.</a></li>
+            <li><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Más</div>
+          <ul class="footer__nav">
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="a-quien-asesoramos.html">A Quién Asesoramos</a></li>
+            <li><a href="#login">Client Login</a></li>
+            <li><a href="#privacidad">Privacidad</a></li>
+            <li><a href="#legal">Aviso Legal</a></li>
+            <li><a href="#regulacion">Regulación</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management LLC. Todos los derechos reservados. &nbsp;<a href="#privacidad">Política de Privacidad</a> &nbsp;&middot;&nbsp; <a href="#legal">Aviso Legal</a> &nbsp;&middot;&nbsp; <a href="#regulacion">Regulación</a></p>
+        <a href="#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer">
+        <p>Atlas Wealth Management LLC es una firma de asesoramiento de inversiones. La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye una oferta, recomendación de inversión ni asesoramiento financiero personalizado. Las inversiones en mercados financieros conllevan riesgos, incluyendo la posible pérdida del capital invertido. El rendimiento pasado no garantiza resultados futuros. Registrado como Investment Advisor en los Estados Unidos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Form success message
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        btn.textContent = 'Enviando…';
+        btn.disabled = true;
+        setTimeout(function() {
+          btn.textContent = 'Mensaje enviado';
+          btn.style.backgroundColor = '#2A5C3F';
+          document.getElementById('formSuccess').style.display = 'block';
+        }, 1000);
+      });
+    }
+  </script>
+</body>
+</html>

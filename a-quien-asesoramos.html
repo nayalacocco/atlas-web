@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Quién Asesoramos — Atlas Wealth Management</title>
+  <meta name="description" content="Asesoramos a emprendedores, familias multi-generacionales y family offices que comparten una visión de largo plazo para su patrimonio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .profile-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .profile-section:last-of-type {
+      border-bottom: none;
+    }
+    .profile-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+    .profile-visual {
+      aspect-ratio: 4 / 3;
+      position: relative;
+      overflow: hidden;
+    }
+    .profile-visual--a { background: linear-gradient(135deg, #0E1A2B 0%, #1E3050 100%); }
+    .profile-visual--b { background: linear-gradient(135deg, #1a1a1a 0%, #2A2A2A 100%); }
+    .profile-visual--c { background: linear-gradient(135deg, #162338 0%, #0E1A2B 100%); }
+    .profile-visual-number {
+      position: absolute;
+      bottom: 32px;
+      right: 40px;
+      font-family: var(--font-serif);
+      font-size: 8rem;
+      font-weight: 400;
+      color: rgba(160,123,79,0.12);
+      line-height: 1;
+    }
+    .profile-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid var(--light-grey);
+    }
+    .profile-detail {
+      padding: 28px 32px;
+      border-right: 1px solid var(--light-grey);
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .profile-detail:nth-child(even) { border-right: none; }
+    .profile-detail:nth-last-child(-n+2) { border-bottom: none; }
+    .profile-detail__label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: 8px;
+    }
+    .profile-detail__text {
+      font-size: 0.88rem;
+      color: var(--charcoal-mid);
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .profile-header { grid-template-columns: 1fr; gap: 40px; }
+      .profile-detail-grid { grid-template-columns: 1fr; }
+      .profile-detail { border-right: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-mark">Atlas</span>
+        <span class="nav__logo-sub">Wealth Management</span>
+      </a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link" style="color: var(--bronze);">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="contacto.html#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>A Quién Asesoramos</span></nav>
+          <span class="overline">Nuestros Clientes</span>
+          <h1>Trabajamos con quienes<br />piensan en generaciones</h1>
+          <p class="lead">No somos una firma para todos. Trabajamos con un número selectivo de clientes que comparten nuestra visión del patrimonio como responsabilidad de largo plazo.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="section section--white">
+      <div class="container--narrow">
+        <div class="section-intro text-center fade-up">
+          <span class="overline">Criterio de Selección</span>
+          <h2>Selectivos por diseño</h2>
+          <p class="lead">La profundidad de nuestra relación con cada cliente es posible solo porque trabajamos con pocos. Este es un principio operativo, no un argumento de marketing.</p>
+        </div>
+        <div class="grid-3" style="margin-top: 0;">
+          <div style="text-align: center; padding: 40px 24px;" class="fade-up fade-up--delay-1">
+            <div style="font-family: var(--font-serif); font-size: 2.5rem; font-style: italic; color: var(--bronze); margin-bottom: 12px;">I</div>
+            <h4 style="margin-bottom: 10px;">Horizonte de largo plazo</h4>
+            <p style="font-size: 0.88rem;">Clientes que entienden que la riqueza genuina se construye en décadas, no en ciclos de mercado.</p>
+          </div>
+          <div style="text-align: center; padding: 40px 24px;" class="fade-up fade-up--delay-2">
+            <div style="font-family: var(--font-serif); font-size: 2.5rem; font-style: italic; color: var(--bronze); margin-bottom: 12px;">II</div>
+            <h4 style="margin-bottom: 10px;">Alineación de valores</h4>
+            <p style="font-size: 0.88rem;">Creemos en relaciones donde los valores fundamentales sobre el dinero y el riesgo están alineados.</p>
+          </div>
+          <div style="text-align: center; padding: 40px 24px;" class="fade-up fade-up--delay-3">
+            <div style="font-family: var(--font-serif); font-size: 2.5rem; font-style: italic; color: var(--bronze); margin-bottom: 12px;">III</div>
+            <h4 style="margin-bottom: 10px;">Complejidad patrimonial</h4>
+            <p style="font-size: 0.88rem;">Patrimonios con suficiente complejidad para justificar el nivel de atención y expertise que ofrecemos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL 1: EMPRENDEDORES -->
+    <section class="section section--offwhite" id="emprendedores">
+      <div class="container">
+        <div class="profile-header">
+          <div class="fade-up">
+            <span class="overline">Perfil 01</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Emprendedores y Fundadores</h2>
+            <p>Acompañamos a emprendedores en uno de los momentos más críticos y complejos de su vida financiera: la transición desde capital concentrado y operativo hacia patrimonio líquido, diversificado y de largo plazo.</p>
+            <p>Crear una empresa exitosa requiere concentración, convicción y tolerancia al riesgo. Preservar y hacer crecer ese patrimonio una vez liquido requiere principios exactamente opuestos. Esta transición es más difícil de lo que parece y requiere acompañamiento especializado.</p>
+            <p>Entendemos la psicología del emprendedor. Sabemos cómo trabajar con personas acostumbradas a tomar decisiones con convicción y velocidad, ayudándoles a adaptar esa mentalidad a la gestión de un patrimonio complejo.</p>
+          </div>
+          <div class="profile-visual profile-visual--a fade-up">
+            <div class="profile-visual-number">01</div>
+          </div>
+        </div>
+        <div class="profile-detail-grid fade-up">
+          <div class="profile-detail">
+            <div class="profile-detail__label">Situaciones típicas</div>
+            <div class="profile-detail__text">Liquidez post-venta o IPO, gestión de equity concentrado, transición familia-empresa</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Desafíos principales</div>
+            <div class="profile-detail__text">Concentración de riesgo, planificación fiscal, diversificación ordenada, continuidad familiar</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Lo que ofrecemos</div>
+            <div class="profile-detail__text">Estrategia de diversificación, planificación fiscal integrada, estructura patrimonial, advisory de largo plazo</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Nuestra ventaja</div>
+            <div class="profile-detail__text">Experiencia con patrimonios post-evento de liquidez. Independencia para recomendar sin conflictos.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL 2: FAMILIAS -->
+    <section class="section section--white" id="familias">
+      <div class="container">
+        <div class="profile-header">
+          <div class="profile-visual profile-visual--b fade-up" style="order: 1;">
+            <div class="profile-visual-number">02</div>
+          </div>
+          <div class="fade-up" style="order: 2;">
+            <span class="overline">Perfil 02</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Familias Multi-Generacionales</h2>
+            <p>El patrimonio familiar es más que dinero. Es el resultado de décadas de trabajo, decisiones y sacrificios. Preservarlo y transferirlo a las siguientes generaciones requiere una gestión que va más allá de los activos financieros.</p>
+            <p>Trabajamos con familias que ya han construido un patrimonio significativo y quieren asegurarse de que ese patrimonio survive a ciclos de mercado, transiciones generacionales y la inevitable complejidad que genera el tiempo.</p>
+            <p>Nuestra experiencia en planificación multigeneracional nos permite diseñar estructuras que preservan tanto el capital como la cohesión y los valores familiares a lo largo del tiempo.</p>
+          </div>
+        </div>
+        <div class="profile-detail-grid fade-up">
+          <div class="profile-detail">
+            <div class="profile-detail__label">Situaciones típicas</div>
+            <div class="profile-detail__text">Familias de segunda o tercera generación, transición del fundador, governance familiar, sucesiones</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Desafíos principales</div>
+            <div class="profile-detail__text">Preservación inter-generacional, alineación de objetivos entre miembros de la familia, estructura legal y fiscal</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Lo que ofrecemos</div>
+            <div class="profile-detail__text">Planificación multigeneracional, estructuración de family office, governance familiar, educación financiera familiar</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Nuestra ventaja</div>
+            <div class="profile-detail__text">Entendemos que el patrimonio familiar tiene dimensiones emocionales que van más allá de los números.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL 3: INSTITUCIONES -->
+    <section class="section section--offwhite" id="instituciones">
+      <div class="container">
+        <div class="profile-header">
+          <div class="fade-up">
+            <span class="overline">Perfil 03</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Family Offices e Instituciones</h2>
+            <p>Los family offices y las instituciones patrimoniales de mayor sofisticación a menudo requieren algo que el mercado rara vez ofrece: una contraparte intelectual independiente que no tenga interés en gestionar activos.</p>
+            <p>Actuamos como advisors estratégicos para family offices y comités de inversión que ya cuentan con equipos internos o gestores externos, pero valoran la perspectiva independiente de alguien que no tiene un mandato que defender.</p>
+            <p>Nuestra función en estos contextos puede incluir diseño de política de inversión, evaluación de gestores externos, coordinación entre asesores especializados, o simplemente ser el interlocutor inteligente que facilita mejores decisiones.</p>
+          </div>
+          <div class="profile-visual profile-visual--c fade-up">
+            <div class="profile-visual-number">03</div>
+          </div>
+        </div>
+        <div class="profile-detail-grid fade-up">
+          <div class="profile-detail">
+            <div class="profile-detail__label">Clientes típicos</div>
+            <div class="profile-detail__text">Single family offices, multi-family offices, fundaciones privadas, comités de inversión institucionales</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Tipo de mandato</div>
+            <div class="profile-detail__text">Advisory estratégico, revisión de cartera, selección de gestores, diseño de política de inversión</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Lo que ofrecemos</div>
+            <div class="profile-detail__text">Perspectiva independiente sin conflictos, rigor analítico institucional, acceso a red de especialistas globales</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail__label">Nuestra ventaja</div>
+            <div class="profile-detail__text">No compitemos con los asesores internos. Complementamos y mejoramos el ecosistema existente.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner">
+          <span class="overline" style="color: var(--bronze-pale);">¿Se Identifica?</span>
+          <h2>Si reconoce su situación<br />en alguno de estos perfiles</h2>
+          <p class="lead">El primer paso es una conversación sin compromiso. Nos gustaría entender su situación y explorar si existe una afinidad con nuestra forma de trabajar.</p>
+          <a href="contacto.html" class="btn btn--primary">Iniciar una conversación</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos.</p>
+        </div>
+        <div><div class="footer__col-title">La Firma</div><ul class="footer__nav"><li><a href="nuestra-firma.html">Nuestra Firma</a></li><li><a href="nuestra-firma.html#valores">Valores</a></li><li><a href="nuestra-firma.html#independencia">Independencia</a></li></ul></div>
+        <div><div class="footer__col-title">Servicios</div><ul class="footer__nav"><li><a href="que-hacemos.html#inversiones">Inversiones</a></li><li><a href="que-hacemos.html#advisory">Advisory</a></li><li><a href="que-hacemos.html#family-office">Family Office</a></li></ul></div>
+        <div><div class="footer__col-title">Perspectivas</div><ul class="footer__nav"><li><a href="insights.html">Insights</a></li><li><a href="equipo.html">Equipo</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__nav"><li><a href="contacto.html#privacidad">Privacidad</a></li><li><a href="contacto.html#legal">Aviso Legal</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management. <a href="contacto.html#privacidad">Privacidad</a> &middot; <a href="contacto.html#legal">Legal</a></p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer"><p>La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye asesoramiento financiero personalizado.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

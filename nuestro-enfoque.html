@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro Enfoque — Atlas Wealth Management</title>
+  <meta name="description" content="Un proceso diseñado para el largo plazo. Cómo Atlas Wealth Management aborda la gestión patrimonial con disciplina y perspectiva global." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .philosophy-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 48px;
+      padding: 56px 0;
+      border-bottom: 1px solid var(--light-grey);
+      align-items: start;
+    }
+    .philosophy-item:first-of-type { padding-top: 0; }
+    .philosophy-number {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 400;
+      color: var(--bronze);
+      opacity: 0.18;
+      line-height: 1;
+    }
+    .philosophy-body h3 {
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+    .principle-card {
+      background: var(--white);
+      padding: 40px 36px;
+      border-left: 2px solid var(--bronze);
+    }
+    .principle-card h4 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .principle-card p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .philosophy-item { grid-template-columns: 1fr; gap: 16px; }
+      .philosophy-number { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Atlas</span><span class="nav__logo-sub">Wealth Management</span></a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link" style="color: var(--bronze);">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="contacto.html#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>Nuestro Enfoque</span></nav>
+          <span class="overline">Proceso y Filosofía</span>
+          <h1>Un proceso diseñado<br />para el largo plazo</h1>
+          <p class="lead">No existe una estrategia universal. Cada cliente requiere un proceso de comprensión profunda antes de cualquier recomendación. Esta es la base de cómo trabajamos.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROCESO -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-intro section-intro--center fade-up">
+          <span class="overline">El Proceso Atlas</span>
+          <h2>Cuatro fases. Una relación<br />que no termina.</h2>
+          <p class="lead">Nuestro proceso no es lineal. Es un ciclo continuo que evoluciona con la vida y las circunstancias de cada cliente.</p>
+        </div>
+
+        <!-- Process steps — expanded visual -->
+        <div style="position: relative; margin-top: 72px;">
+          <div style="position: absolute; top: 0; bottom: 0; left: calc(100px + 48px); width: 1px; background: linear-gradient(to bottom, var(--bronze), transparent); opacity: 0.3;"></div>
+
+          <div class="philosophy-item fade-up">
+            <div class="philosophy-number">01</div>
+            <div class="philosophy-body">
+              <h3>Comprender</h3>
+              <p>Todo comienza con la escucha. Antes de proponer ninguna estrategia, dedicamos tiempo a entender el contexto completo del patrimonio: cómo se originó, qué estructura tiene, qué objetivos de vida persigue el cliente, qué generaciones están involucradas, cuáles son los miedos y las expectativas reales.</p>
+              <p>La mayoría de los asesores llegan con soluciones antes de entender el problema. En Atlas, llegamos con preguntas. Esta fase puede tomar semanas o meses. No tiene prisa.</p>
+              <div style="background: var(--off-white); padding: 24px 28px; margin-top: 24px; border-left: 2px solid var(--bronze);">
+                <p style="font-style: italic; font-family: var(--font-serif); font-size: 0.95rem; color: var(--navy);">"Los mejores asesores son los que hacen las mejores preguntas, no los que tienen las mejores respuestas."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="philosophy-item fade-up">
+            <div class="philosophy-number">02</div>
+            <div class="philosophy-body">
+              <h3>Diseñar</h3>
+              <p>Solo una vez que tenemos una comprensión profunda del contexto, construimos una propuesta estratégica. No es un documento genérico. Es un diseño patrimonial específico para esa familia o institución, en ese momento de su vida.</p>
+              <p>El diseño incluye la estrategia de inversión, pero también la estructura patrimonial, la planificación fiscal, los criterios de evaluación de éxito y el proceso de toma de decisiones que usaremos en el futuro. Es un marco de trabajo para una relación de largo plazo.</p>
+            </div>
+          </div>
+
+          <div class="philosophy-item fade-up">
+            <div class="philosophy-number">03</div>
+            <div class="philosophy-body">
+              <h3>Implementar</h3>
+              <p>La implementación es deliberada y ordenada. No ejecutamos todo de una vez. Construimos posiciones con disciplina, respetando la complejidad de la situación inicial (concentración existente, implicaciones fiscales, liquidez disponible).</p>
+              <p>Coordinamos con los asesores especialistas que sean necesarios — abogados, fiscalistas, custodios — para asegurar que la implementación sea coherente con la estrategia global.</p>
+            </div>
+          </div>
+
+          <div class="philosophy-item fade-up" style="border-bottom: none;">
+            <div class="philosophy-number">04</div>
+            <div class="philosophy-body">
+              <h3>Stewardship continuo</h3>
+              <p>La relación con Atlas no termina al implementar la estrategia. El stewardship es el núcleo de lo que hacemos: supervisar, ajustar y acompañar decisiones a lo largo del tiempo, a medida que la vida del cliente evoluciona y los mercados cambian.</p>
+              <p>Esto incluye reuniones regulares de revisión, comunicación proactiva cuando las condiciones cambian, y estar disponibles cuando el cliente necesita un interlocutor de confianza para decisiones importantes.</p>
+              <div style="background: var(--off-white); padding: 24px 28px; margin-top: 24px; border-left: 2px solid var(--bronze);">
+                <p style="font-style: italic; font-family: var(--font-serif); font-size: 0.95rem; color: var(--navy);">"Stewardship no es gestionar activos. Es cargar con la responsabilidad del bienestar patrimonial de largo plazo de otra persona."</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA DE INVERSIÓN -->
+    <section class="section section--offwhite">
+      <div class="container">
+        <div class="section-intro section-intro--center fade-up">
+          <span class="overline">Filosofía de Inversión</span>
+          <h2>Principios que guían<br />la construcción de carteras</h2>
+        </div>
+
+        <div class="grid-3" style="gap: 2px;">
+          <div class="principle-card fade-up fade-up--delay-1">
+            <h4>Perspectiva de largo plazo como ventaja</h4>
+            <p>Los mejores rendimientos en activos financieros se obtienen con horizontes de inversión que la mayoría de los participantes no pueden o no quieren mantener. Nuestros clientes, asesorados correctamente, pueden beneficiarse de esta incomodidad ajena.</p>
+          </div>
+          <div class="principle-card fade-up fade-up--delay-2">
+            <h4>Diversificación estructural, no cosmética</h4>
+            <p>La verdadera diversificación reduce el riesgo concentrado. No se logra con 20 fondos que se mueven de forma similar. Se logra con activos con distintos drivers de retorno y distintas correlaciones en momentos de estrés.</p>
+          </div>
+          <div class="principle-card fade-up fade-up--delay-3">
+            <h4>El costo de oportunidad del error es asimétrico</h4>
+            <p>Perder capital es mucho más dañino que perder una ganancia potencial. El principio de preservación no es conservadurismo; es matemática. Un -50% requiere un +100% para recuperarse.</p>
+          </div>
+          <div class="principle-card fade-up fade-up--delay-1" style="margin-top: 2px;">
+            <h4>La actividad no es sinónimo de valor añadido</h4>
+            <p>Rotamos cuando hay razón para rotar, no cuando el mercado nos genera ansiedad. La disciplina de no hacer nada en los momentos equivocados es una de las habilidades más valiosas en wealth management.</p>
+          </div>
+          <div class="principle-card fade-up fade-up--delay-2" style="margin-top: 2px;">
+            <h4>Los costes y las estructuras importan</h4>
+            <p>Un punto porcentual de costes anual puede destruir más valor en 20 años que una mala decisión de mercado. La eficiencia de estructuras, vehículos y costes es parte del proceso de inversión.</p>
+          </div>
+          <div class="principle-card fade-up fade-up--delay-3" style="margin-top: 2px;">
+            <h4>El riesgo real no está en la volatilidad</h4>
+            <p>El verdadero riesgo patrimonial es la pérdida permanente de capital, no la oscilación temporal de precios. Diseñamos carteras para resistir periodos prolongados de estrés de mercado sin necesidad de vender en el momento equivocado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIA -->
+    <div class="about-split">
+      <div class="about-split__visual">
+        <div class="about-split__visual-bg"></div>
+        <div class="about-split__visual-quote">
+          <blockquote>
+            "La paciencia en inversión no es pasividad. Es la convicción activa de que el tiempo es un activo que pocos saben explotar."
+            <cite>— Filosofía Atlas</cite>
+          </blockquote>
+        </div>
+      </div>
+      <div class="about-split__content">
+        <span class="overline">Qué Nos Diferencia</span>
+        <h2>Alineados con usted. No con el mercado.</h2>
+        <p>La mayoría de las firmas de gestión patrimonial tienen incentivos alineados con la actividad, no con el resultado. Cobran por transacción, por producto o por activos bajo gestión — lo que crea presión hacia la complejidad y la rotación.</p>
+        <p>En Atlas, nuestra remuneración está alineada con la confianza del cliente, no con el volumen. Esto nos permite recomendar la inacción cuando es lo correcto, simplificar cuando tiene sentido y decir no cuando es necesario.</p>
+        <p>La independencia estructural es la base de un asesoramiento genuino. Sin ella, todo lo demás es secundario.</p>
+        <a href="nuestra-firma.html#independencia" class="btn btn--outline-dark">Nuestra independencia</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner">
+          <span class="overline" style="color: var(--bronze-pale);">Comenzar</span>
+          <h2>¿Resuena esta forma<br />de pensar con la suya?</h2>
+          <p class="lead">Si comparte nuestra visión del patrimonio como responsabilidad de largo plazo, nos gustaría iniciar una conversación.</p>
+          <a href="contacto.html" class="btn btn--primary">Hablar con el equipo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos.</p>
+        </div>
+        <div><div class="footer__col-title">La Firma</div><ul class="footer__nav"><li><a href="nuestra-firma.html">Nuestra Firma</a></li><li><a href="nuestra-firma.html#valores">Valores</a></li><li><a href="nuestra-firma.html#independencia">Independencia</a></li></ul></div>
+        <div><div class="footer__col-title">Servicios</div><ul class="footer__nav"><li><a href="que-hacemos.html#inversiones">Inversiones</a></li><li><a href="que-hacemos.html#advisory">Advisory</a></li><li><a href="que-hacemos.html#family-office">Family Office</a></li></ul></div>
+        <div><div class="footer__col-title">Perspectivas</div><ul class="footer__nav"><li><a href="insights.html">Insights</a></li><li><a href="equipo.html">Equipo</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__nav"><li><a href="contacto.html#privacidad">Privacidad</a></li><li><a href="contacto.html#legal">Aviso Legal</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management. <a href="contacto.html#privacidad">Privacidad</a> &middot; <a href="contacto.html#legal">Legal</a></p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer"><p>La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye asesoramiento financiero personalizado.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

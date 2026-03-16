@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qué Hacemos — Atlas Wealth Management</title>
+  <meta name="description" content="Gestión de inversiones, advisory estratégico y servicios de family office para patrimonios complejos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .service-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .service-section:last-of-type { border-bottom: none; }
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .service-list {
+      margin-top: 28px;
+    }
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--light-grey);
+      font-size: 0.9rem;
+      color: var(--charcoal-mid);
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .service-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--bronze);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+    .service-badge {
+      display: inline-block;
+      padding: 8px 18px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--navy);
+      color: var(--off-white);
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .service-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" data-transparent="false" role="navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Atlas</span><span class="nav__logo-sub">Wealth Management</span></a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="nuestra-firma.html" class="nav__link">Nuestra Firma <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="a-quien-asesoramos.html" class="nav__link">A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="que-hacemos.html" class="nav__link" style="color: var(--bronze);">Qué Hacemos <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a></li>
+        <li class="nav__item"><a href="insights.html" class="nav__link">Insights <span class="nav__link-chevron">&#8964;</span></a>
+          <ul class="nav__dropdown">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions"><a href="contacto.html#login" class="nav__client-login">Client Login</a></div>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <div class="nav__mobile-item"><a href="nuestra-firma.html" class="nav__mobile-link">Nuestra Firma</a></div>
+      <div class="nav__mobile-item"><a href="a-quien-asesoramos.html" class="nav__mobile-link">A Quién Asesoramos</a></div>
+      <div class="nav__mobile-item"><a href="que-hacemos.html" class="nav__mobile-link">Qué Hacemos</a></div>
+      <div class="nav__mobile-item"><a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a></div>
+      <div class="nav__mobile-item"><a href="insights.html" class="nav__mobile-link">Insights</a></div>
+      <div class="nav__mobile-item"><a href="equipo.html" class="nav__mobile-link">Equipo</a></div>
+      <div class="nav__mobile-item"><a href="contacto.html" class="nav__mobile-link">Contacto</a></div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">—</span><span>Qué Hacemos</span></nav>
+          <span class="overline">Nuestros Servicios</span>
+          <h1>Gestión integral de<br />patrimonios complejos</h1>
+          <p class="lead">No gestionamos activos de forma aislada. Entendemos el patrimonio como un sistema completo y diseñamos soluciones que responden a objetivos de vida reales, no a benchmarks de mercado.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SERVICE NAV -->
+    <div style="background: var(--white); border-bottom: 1px solid var(--light-grey); padding: 0; position: sticky; top: 80px; z-index: 100;">
+      <div class="container">
+        <div style="display: flex; gap: 0; overflow-x: auto;">
+          <a href="#inversiones" style="display: block; padding: 18px 28px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); border-right: 1px solid var(--light-grey); white-space: nowrap; transition: color 0.2s, background 0.2s;" onmouseover="this.style.color='var(--bronze)'" onmouseout="this.style.color='var(--charcoal)'">Gestión de Inversiones</a>
+          <a href="#advisory" style="display: block; padding: 18px 28px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); border-right: 1px solid var(--light-grey); white-space: nowrap;" onmouseover="this.style.color='var(--bronze)'" onmouseout="this.style.color='var(--charcoal)'">Advisory Estratégico</a>
+          <a href="#family-office" style="display: block; padding: 18px 28px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); white-space: nowrap;" onmouseover="this.style.color='var(--bronze)'" onmouseout="this.style.color='var(--charcoal)'">Servicios de Family Office</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GESTIÓN DE INVERSIONES -->
+    <section class="service-section section--white" id="inversiones">
+      <div class="container">
+        <div class="service-layout">
+          <div class="fade-up">
+            <div class="service-badge">Crecer · Preservar</div>
+            <span class="overline">Servicio 01</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Gestión de Inversiones</h2>
+            <p>Construimos y gestionamos portafolios de inversión globales con una filosofía basada en principios, no en rendimientos pasados ni en narrativas de mercado. Nuestra aproximación es disciplinada, paciente y estructural.</p>
+            <p>No creemos en la gestión activa por el bien de la actividad. Cada decisión de inversión responde a una tesis razonada y a la estrategia general del cliente. Rotamos cuando hay razón para rotar, no cuando el mercado nos genera ansiedad.</p>
+            <p>La construcción de cartera combina clases de activos, geografías, divisas y estructuras de riesgo diseñadas para el horizonte y los objetivos específicos de cada cliente.</p>
+            <a href="nuestro-enfoque.html" class="btn-arrow" style="margin-top: 16px;">Ver nuestro enfoque de inversión</a>
+          </div>
+          <div class="fade-up">
+            <div style="background: var(--off-white); padding: 40px;">
+              <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warm-grey); margin-bottom: 20px;">Qué incluye</div>
+              <ul class="service-list">
+                <li>Construcción de portafolio estratégico global</li>
+                <li>Asignación táctica de activos según ciclo económico</li>
+                <li>Selección de gestores y vehículos de inversión</li>
+                <li>Gestión del riesgo cambiario y de concentración</li>
+                <li>Monitoreo y rebalanceo continuo</li>
+                <li>Reportes de portafolio con frecuencia pactada</li>
+                <li>Acceso a inversiones alternativas (PE, hedge funds, real assets)</li>
+                <li>Integración con planificación fiscal</li>
+              </ul>
+            </div>
+            <div style="background: var(--navy); padding: 32px 40px; margin-top: 2px;">
+              <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bronze-pale); margin-bottom: 12px;">Nuestra filosofía</div>
+              <p style="font-family: var(--font-serif); font-style: italic; color: var(--off-white); font-size: 0.95rem; line-height: 1.6;">"El rendimiento de largo plazo no se logra siendo más listo que el mercado. Se logra siendo más disciplinado y más paciente que la mayoría."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVISORY ESTRATÉGICO -->
+    <section class="service-section section--offwhite" id="advisory">
+      <div class="container">
+        <div class="service-layout">
+          <div style="order: 2;" class="fade-up">
+            <div style="background: var(--white); padding: 40px;">
+              <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warm-grey); margin-bottom: 20px;">Áreas de advisory</div>
+              <ul class="service-list">
+                <li>Estructuración patrimonial y holding families</li>
+                <li>Gestión de eventos de liquidez (venta, IPO, herencias)</li>
+                <li>Planificación de concentración y diversificación</li>
+                <li>Decisiones de divisa y cobertura</li>
+                <li>Revisión y coordinación de asesores especializados</li>
+                <li>Advisory en inversiones directas e illíquidas</li>
+                <li>Planificación de retiro y flujos de capital</li>
+                <li>Evaluación de oportunidades de inversión</li>
+              </ul>
+            </div>
+          </div>
+          <div style="order: 1;" class="fade-up">
+            <div class="service-badge">Preservar · Estructurar</div>
+            <span class="overline">Servicio 02</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Advisory Estratégico</h2>
+            <p>El asesoramiento estratégico va más allá de la gestión de un portafolio. Se trata de ser el contrapunto intelectual que ayuda a nuestros clientes a tomar mejores decisiones patrimoniales en los momentos que realmente importan.</p>
+            <p>Los patrimonios complejos enfrentan decisiones que no tienen respuesta obvia: cómo estructurar una liquidez significativa, cómo diversificar sin precipitarse, cómo equilibrar activos líquidos e ilíquidos, cómo coordinar entre múltiples asesores y jurisdicciones.</p>
+            <p>Actuamos como el advisor de confianza que puede ver el panorama completo y ayudar a navegar estas decisiones con claridad, sin conflictos de interés y con experiencia en situaciones similares.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILY OFFICE -->
+    <section class="service-section section--white" id="family-office">
+      <div class="container">
+        <div class="service-layout">
+          <div class="fade-up">
+            <div class="service-badge">Coordinar · Delegar</div>
+            <span class="overline">Servicio 03</span>
+            <h2 style="margin-top: 16px; margin-bottom: 24px;">Servicios de Family Office</h2>
+            <p>Los servicios de family office proporcionan a nuestros clientes las capacidades de una family office sin la complejidad operativa de crear y mantener una internamente. Coordinamos el ecosistema completo de asesores y especialistas alrededor del patrimonio familiar.</p>
+            <p>Este servicio es especialmente relevante para familias cuyo patrimonio ha crecido hasta un punto donde la coordinación entre asesores, la consolidación de información y la supervisión de la estrategia global requieren dedicación profesional especializada.</p>
+            <p>No somos administradores. Somos el punto de coordinación estratégica que asegura que todos los piezas del puzzle patrimonial funcionen de manera coherente y alineada.</p>
+          </div>
+          <div class="fade-up">
+            <div style="background: var(--off-white); padding: 40px;">
+              <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--warm-grey); margin-bottom: 20px;">Qué incluye</div>
+              <ul class="service-list">
+                <li>Consolidación y reporting patrimonial global</li>
+                <li>Coordinación de asesores legales, fiscales y contables</li>
+                <li>Supervisión de custodios y gestores externos</li>
+                <li>Governance familiar y protocolos de decisión</li>
+                <li>Planificación de liquidez y flujos operativos</li>
+                <li>Educación financiera de siguientes generaciones</li>
+                <li>Coordinación de seguros y coberturas patrimoniales</li>
+                <li>Gestión de activos no financieros (inmuebles, arte, etc.)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__inner">
+          <span class="overline" style="color: var(--bronze-pale);">Comenzar</span>
+          <h2>El primer paso es<br />entender su situación</h2>
+          <p class="lead">Cada mandato comienza con una conversación de escucha activa. Sin presentaciones de producto, sin propuestas genéricas. Solo comprensión profunda de su contexto.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="contacto.html" class="btn btn--primary">Hablar con el equipo</a>
+            <a href="nuestro-enfoque.html" class="btn btn--outline">Nuestro enfoque</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><span class="footer__logo-mark">Atlas</span><span class="footer__logo-sub">Wealth Management</span></a>
+          <p class="footer__tagline">Stewardship independiente para patrimonios complejos.</p>
+        </div>
+        <div><div class="footer__col-title">La Firma</div><ul class="footer__nav"><li><a href="nuestra-firma.html">Nuestra Firma</a></li><li><a href="nuestra-firma.html#valores">Valores</a></li><li><a href="nuestra-firma.html#independencia">Independencia</a></li></ul></div>
+        <div><div class="footer__col-title">Servicios</div><ul class="footer__nav"><li><a href="#inversiones">Gestión de Inversiones</a></li><li><a href="#advisory">Advisory Estratégico</a></li><li><a href="#family-office">Family Office</a></li></ul></div>
+        <div><div class="footer__col-title">Perspectivas</div><ul class="footer__nav"><li><a href="insights.html">Insights</a></li><li><a href="equipo.html">Equipo</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__nav"><li><a href="contacto.html#privacidad">Privacidad</a></li><li><a href="contacto.html#legal">Aviso Legal</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2025 Atlas Wealth Management. <a href="contacto.html#privacidad">Privacidad</a> &middot; <a href="contacto.html#legal">Legal</a></p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+      <div class="footer__disclaimer"><p>La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye asesoramiento financiero personalizado.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

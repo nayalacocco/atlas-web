@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Wealth Management — Asesoramiento Patrimonial para Familias y Emprendedores</title>
+  <meta name="description" content="Acompañamos a familias empresarias y emprendedores en la preservación y evolución de su patrimonio a lo largo de generaciones." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="nav" data-transparent="true" role="navigation" aria-label="Navegación principal">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="Atlas Wealth Management — Inicio">
+        <span class="nav__logo-mark">Atlas</span>
+        <span class="nav__logo-sub">Wealth Management</span>
+      </a>
+
+      <ul class="nav__menu" role="list">
+
+        <li class="nav__item">
+          <a href="nuestra-firma.html" class="nav__link">
+            Nuestra Firma <span class="nav__link-chevron">&#8964;</span>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li class="nav__dropdown-item"><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="a-quien-asesoramos.html" class="nav__link">
+            A Quién Asesoramos <span class="nav__link-chevron">&#8964;</span>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a></li>
+            <li class="nav__dropdown-item"><a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="que-hacemos.html" class="nav__link">
+            Qué Hacemos <span class="nav__link-chevron">&#8964;</span>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li class="nav__dropdown-item"><a href="que-hacemos.html#family-office">Servicios de Family Office</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="nuestro-enfoque.html" class="nav__link">Nuestro Enfoque</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="insights.html" class="nav__link">
+            Insights <span class="nav__link-chevron">&#8964;</span>
+          </a>
+          <ul class="nav__dropdown" role="list">
+            <li class="nav__dropdown-item"><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#largo-plazo">Inversión de Largo Plazo</a></li>
+            <li class="nav__dropdown-item"><a href="insights.html#cartas">Cartas Atlas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <a href="equipo.html" class="nav__link">Equipo</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="contacto.html" class="nav__link">Contacto</a>
+        </li>
+
+      </ul>
+
+      <div class="nav__actions">
+        <a href="contacto.html#login" class="nav__client-login">Client Login</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div><!-- /.nav__inner -->
+
+    <!-- Mobile nav -->
+    <div class="nav__mobile" aria-hidden="true">
+      <div class="nav__mobile-item">
+        <a href="nuestra-firma.html" class="nav__mobile-link" data-toggle="mobile-firma">Nuestra Firma</a>
+        <div id="mobile-firma" class="nav__mobile-sub" style="display:none;">
+          <a href="nuestra-firma.html#historia">Historia y Propiedad</a>
+          <a href="nuestra-firma.html#valores">Valores y Stewardship</a>
+          <a href="nuestra-firma.html#independencia">Independencia</a>
+          <a href="nuestra-firma.html#perspectiva">Perspectiva Global</a>
+        </div>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="a-quien-asesoramos.html" class="nav__mobile-link" data-toggle="mobile-quien">A Quién Asesoramos</a>
+        <div id="mobile-quien" class="nav__mobile-sub" style="display:none;">
+          <a href="a-quien-asesoramos.html#emprendedores">Emprendedores y Fundadores</a>
+          <a href="a-quien-asesoramos.html#familias">Familias Multi-Generacionales</a>
+          <a href="a-quien-asesoramos.html#instituciones">Family Offices e Instituciones</a>
+        </div>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="que-hacemos.html" class="nav__mobile-link" data-toggle="mobile-que">Qué Hacemos</a>
+        <div id="mobile-que" class="nav__mobile-sub" style="display:none;">
+          <a href="que-hacemos.html#inversiones">Gestión de Inversiones</a>
+          <a href="que-hacemos.html#advisory">Advisory Estratégico</a>
+          <a href="que-hacemos.html#family-office">Servicios de Family Office</a>
+        </div>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="nuestro-enfoque.html" class="nav__mobile-link">Nuestro Enfoque</a>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="insights.html" class="nav__mobile-link" data-toggle="mobile-insights">Insights</a>
+        <div id="mobile-insights" class="nav__mobile-sub" style="display:none;">
+          <a href="insights.html#perspectivas">Perspectivas de Mercado</a>
+          <a href="insights.html#largo-plazo">Inversión de Largo Plazo</a>
+          <a href="insights.html#cartas">Cartas Atlas</a>
+        </div>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="equipo.html" class="nav__mobile-link">Equipo</a>
+      </div>
+      <div class="nav__mobile-item">
+        <a href="contacto.html" class="nav__mobile-link">Contacto</a>
+      </div>
+      <a href="contacto.html#login" class="nav__mobile-login">Client Login</a>
+    </div><!-- /.nav__mobile -->
+
+  </nav>
+  <!-- ─── END NAVIGATION ─── -->
+
+
+  <main>
+
+    <!-- ════════════════════════════════════════
+         1. HERO
+    ════════════════════════════════════════ -->
+    <section class="hero" aria-label="Encabezado principal">
+      <div class="hero__bg">
+        <div class="hero__bg-gradient"></div>
+        <div class="hero__bg-pattern"></div>
+        <div class="hero__bg-lines"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <div class="hero__eyebrow-line"></div>
+            <span class="hero__eyebrow-text">Asesoramiento Patrimonial Independiente</span>
+          </div>
+
+          <h1 class="hero__headline">
+            Estrategia y gestión<br />
+            <em>de patrimonios complejos</em>
+          </h1>
+
+          <p class="hero__sub">
+            Acompañamos a familias empresarias y emprendedores en la preservación, estructuración y evolución de su patrimonio a lo largo de generaciones.
+          </p>
+
+          <div class="hero__actions">
+            <a href="nuestro-enfoque.html" class="btn btn--primary">Nuestro Enfoque</a>
+            <a href="contacto.html" class="btn btn--outline">Hablar con nuestro equipo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         2. CREDIBILITY BAND
+    ════════════════════════════════════════ -->
+    <div class="credibility" aria-label="Datos institucionales">
+      <div class="credibility__inner">
+        <div class="credibility__item">
+          <span class="credibility__value">Décadas de experiencia combinada en inversión y asesoramiento patrimonial</span>
+          <span class="credibility__label">Trayectoria</span>
+        </div>
+        <div class="credibility__item">
+          <span class="credibility__value">Asesorando familias e instituciones en múltiples mercados globales</span>
+          <span class="credibility__label">Alcance</span>
+        </div>
+        <div class="credibility__item">
+          <span class="credibility__value">Independientes. Selectivos por diseño. Alineados con nuestros clientes</span>
+          <span class="credibility__label">Principios</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════
+         3. A QUIÉN ASESORAMOS
+    ════════════════════════════════════════ -->
+    <section class="section section--white" id="a-quien">
+      <div class="container">
+
+        <div class="section-intro fade-up">
+          <span class="overline">A Quién Asesoramos</span>
+          <h2>Trabajamos con quienes<br />valoran el largo plazo</h2>
+          <p class="lead">Nuestros clientes comparten una característica esencial: comprenden que la gestión del patrimonio es una responsabilidad de largo plazo, no una transacción.</p>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="audience-card fade-up fade-up--delay-1">
+            <div class="audience-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="24" cy="24" r="20"/>
+                <path d="M16 30 C16 22 32 22 32 30"/>
+                <circle cx="24" cy="18" r="5"/>
+              </svg>
+            </div>
+            <h3>Emprendedores y Fundadores</h3>
+            <p>Acompañamos a emprendedores en la transición desde capital operativo hacia patrimonio de largo plazo. Entendemos la complejidad de monetizar una empresa y preservar lo construido.</p>
+            <a href="a-quien-asesoramos.html#emprendedores" class="btn-arrow">Saber más</a>
+          </article>
+
+          <article class="audience-card fade-up fade-up--delay-2">
+            <div class="audience-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M8 36 L8 20 L24 10 L40 20 L40 36 Z"/>
+                <rect x="18" y="26" width="12" height="10"/>
+                <line x1="8" y1="36" x2="40" y2="36"/>
+              </svg>
+            </div>
+            <h3>Familias Multi-Generacionales</h3>
+            <p>Ayudamos a preservar, estructurar y transferir patrimonio entre generaciones. Diseñamos estrategias que trascienden ciclos de mercado y mantienen la cohesión familiar.</p>
+            <a href="a-quien-asesoramos.html#familias" class="btn-arrow">Saber más</a>
+          </article>
+
+          <article class="audience-card fade-up fade-up--delay-3">
+            <div class="audience-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="6" y="14" width="36" height="24" rx="1"/>
+                <path d="M14 14 L14 10 M34 14 L34 10"/>
+                <line x1="6" y1="22" x2="42" y2="22"/>
+                <line x1="18" y1="22" x2="18" y2="38"/>
+                <line x1="30" y1="22" x2="30" y2="38"/>
+              </svg>
+            </div>
+            <h3>Family Offices e Instituciones</h3>
+            <p>Asesoramiento estratégico independiente para portafolios institucionales. Actuamos como contraparte intelectual y coordinador de asesores en estructuras patrimoniales complejas.</p>
+            <a href="a-quien-asesoramos.html#instituciones" class="btn-arrow">Saber más</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         4. QUÉ HACEMOS
+    ════════════════════════════════════════ -->
+    <section class="section section--offwhite" id="que-hacemos">
+      <div class="container">
+
+        <div class="grid-2" style="gap: 80px; align-items: start;">
+
+          <div>
+            <div class="section-intro fade-up">
+              <span class="overline">Qué Hacemos</span>
+              <h2>Gestión integral del patrimonio</h2>
+              <p class="lead">No gestionamos activos de forma aislada. Comprendemos el patrimonio como un sistema completo y diseñamos estrategias que responden a objetivos de vida reales.</p>
+            </div>
+            <a href="que-hacemos.html" class="btn btn--outline-dark fade-up" style="margin-top: 8px;">Ver todos los servicios</a>
+          </div>
+
+          <div>
+            <div class="service-block fade-up">
+              <span class="service-block__label">Crecer</span>
+              <div class="service-block__body">
+                <h3>Gestión de Inversiones</h3>
+                <p>Portafolios globales diseñados con disciplina. Construcción de cartera basada en principios, no en modas. Diversificación estructural a través de activos, geografías y ciclos.</p>
+              </div>
+            </div>
+
+            <div class="service-block fade-up fade-up--delay-1">
+              <span class="service-block__label">Preservar</span>
+              <div class="service-block__body">
+                <h3>Advisory Estratégico</h3>
+                <p>Gestión de riesgo y asignación estratégica. Asesoramiento independiente en decisiones patrimoniales complejas: liquidez, concentración, divisa, estructura.</p>
+              </div>
+            </div>
+
+            <div class="service-block fade-up fade-up--delay-2">
+              <span class="service-block__label">Transferir</span>
+              <div class="service-block__body">
+                <h3>Planificación Patrimonial</h3>
+                <p>Planificación multigeneracional y continuidad familiar. Diseño de estructuras para preservar y transmitir patrimonio con claridad y eficiencia.</p>
+              </div>
+            </div>
+
+            <div class="service-block fade-up fade-up--delay-3">
+              <span class="service-block__label">Coordinar</span>
+              <div class="service-block__body">
+                <h3>Servicios de Family Office</h3>
+                <p>Coordinación de asesores, contadores, abogados y otros especialistas. Gestión centralizada del ecosistema patrimonial completo.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         5. NUESTRO ENFOQUE
+    ════════════════════════════════════════ -->
+    <section class="section section--navy" id="enfoque">
+      <div class="container">
+
+        <div class="section-intro section-intro--center fade-up">
+          <span class="overline">Nuestro Enfoque</span>
+          <h2>Un proceso diseñado<br />para el largo plazo</h2>
+          <p class="lead">No existe una estrategia única.<br />Cada patrimonio requiere una comprensión profunda antes de diseñar una recomendación.</p>
+        </div>
+
+        <div class="approach-steps fade-up">
+          <div class="approach-step">
+            <h4>Diagnóstico</h4>
+            <p>Entendemos el contexto completo del patrimonio: origen, estructura, objetivos de vida y generaciones involucradas.</p>
+          </div>
+          <div class="approach-step">
+            <h4>Diseño</h4>
+            <p>Construimos una estrategia patrimonial alineada con objetivos de largo plazo, tolerancia al riesgo real y horizonte temporal.</p>
+          </div>
+          <div class="approach-step">
+            <h4>Implementación</h4>
+            <p>Estructuramos portafolios globales y soluciones patrimoniales con disciplina, independencia y criterio institucional.</p>
+          </div>
+          <div class="approach-step">
+            <h4>Acompañamiento</h4>
+            <p>Supervisamos, ajustamos y acompañamos decisiones a lo largo del tiempo. La relación no termina al implementar.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 56px;" class="fade-up">
+          <a href="nuestro-enfoque.html" class="btn btn--outline">Explorar nuestro enfoque</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         6. INSIGHTS
+    ════════════════════════════════════════ -->
+    <section class="section section--white" id="insights">
+      <div class="container">
+
+        <div class="section-intro" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;" class="fade-up">
+          <div>
+            <span class="overline">Perspectivas</span>
+            <h2>Insights Atlas</h2>
+          </div>
+          <a href="insights.html" class="btn-arrow" style="padding-bottom: 8px;">Ver todas las perspectivas</a>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="insight-card fade-up fade-up--delay-1">
+            <div class="insight-card__thumb">
+              <div class="insight-card__thumb-bg insight-card__thumb-bg--1"></div>
+              <div class="insight-card__thumb-accent"></div>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__tag">Inversión de Largo Plazo</div>
+              <h3 class="insight-card__title">La disciplina del capital de largo plazo</h3>
+              <span class="insight-card__date">Febrero 2025</span>
+            </div>
+          </article>
+
+          <article class="insight-card fade-up fade-up--delay-2">
+            <div class="insight-card__thumb">
+              <div class="insight-card__thumb-bg insight-card__thumb-bg--2"></div>
+              <div class="insight-card__thumb-accent"></div>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__tag">Perspectivas de Mercado</div>
+              <h3 class="insight-card__title">Navegando ciclos globales de mercado</h3>
+              <span class="insight-card__date">Enero 2025</span>
+            </div>
+          </article>
+
+          <article class="insight-card fade-up fade-up--delay-3">
+            <div class="insight-card__thumb">
+              <div class="insight-card__thumb-bg insight-card__thumb-bg--3"></div>
+              <div class="insight-card__thumb-accent"></div>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__tag">Carta Atlas</div>
+              <h3 class="insight-card__title">El futuro del patrimonio multi-generacional — Carta Atlas Q4</h3>
+              <span class="insight-card__date">Diciembre 2024</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         7. SOBRE ATLAS
+    ════════════════════════════════════════ -->
+    <div class="about-split">
+      <div class="about-split__visual">
+        <div class="about-split__visual-bg"></div>
+        <div class="about-split__visual-quote">
+          <blockquote>
+            "El capital más valioso que administramos no son los activos financieros. Es la confianza que nuestros clientes depositan en nosotros a lo largo de décadas."
+            <cite>— Filosofía Atlas</cite>
+          </blockquote>
+        </div>
+      </div>
+      <div class="about-split__content">
+        <span class="overline">Sobre Atlas</span>
+        <h2 style="white-space: nowrap;">Una firma construida sobre principios.</h2>
+        <p>Atlas Wealth Management es una firma independiente dedicada a la estrategia, gestión y preservación del patrimonio familiar e institucional. Nuestro rol no es simplemente administrar activos.</p>
+        <p>Ayudamos a nuestros clientes a navegar la complejidad financiera con claridad, disciplina y perspectiva global. Actuamos como socios de largo plazo, no como proveedores de productos.</p>
+        <p>Nuestra independencia no es un atributo. Es la condición fundamental para dar un asesoramiento honesto.</p>
+        <a href="nuestra-firma.html" class="btn btn--outline-dark">Conocer la firma</a>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════
+         8. EQUIPO (preview)
+    ════════════════════════════════════════ -->
+    <section class="section section--offwhite" id="equipo">
+      <div class="container">
+
+        <div class="section-intro section-intro--center fade-up">
+          <span class="overline">Equipo</span>
+          <h2>Socios comprometidos con<br />cada relación</h2>
+          <p class="lead">Nuestro equipo combina décadas de experiencia en gestión de inversiones, asesoramiento patrimonial y estructuración de family offices a nivel global.</p>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="team-card fade-up fade-up--delay-1">
+            <div class="team-card__photo team-card__photo--a">
+              <div class="team-card__photo-placeholder">
+                <span class="team-card__initials">NA</span>
+              </div>
+              <div class="team-card__photo-overlay"></div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__name">Nehuen Adonis Ayala Cocco</div>
+              <div class="team-card__role">Socio Fundador &amp; CIO</div>
+              <div class="team-card__bio">
+                <p>Licenciado en Economía y Máster en Finanzas por la UTDT.</p>
+                <p>Experiencia en asesoramiento financiero, valuación de compañías e inversiones en mercados financieros y activos reales.</p>
+                <p>Idóneo en Mercado de Capitales, certificado por la CNV.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card fade-up fade-up--delay-2">
+            <div class="team-card__photo team-card__photo--b">
+              <div class="team-card__photo-placeholder">
+                <span class="team-card__initials">FA</span>
+              </div>
+              <div class="team-card__photo-overlay"></div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__name">Fernando Ricardo Alvarez de la Viesca</div>
+              <div class="team-card__role">Socio Fundador</div>
+            </div>
+          </div>
+
+          <div class="team-card fade-up fade-up--delay-3">
+            <div class="team-card__photo team-card__photo--c">
+              <div class="team-card__photo-placeholder">
+                <span class="team-card__initials">FB</span>
+              </div>
+              <div class="team-card__photo-overlay"></div>
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__name">Federico Thomas Belizan</div>
+              <div class="team-card__role">Socio Fundador</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 56px;" class="fade-up">
+          <a href="equipo.html" class="btn btn--outline-dark">Conocer al equipo completo</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+         9. CONTACTO CTA
+    ════════════════════════════════════════ -->
+    <section class="cta-band" id="contacto">
+      <div class="container">
+        <div class="cta-band__inner">
+          <span class="overline" style="color: var(--bronze-pale);">Contacto</span>
+          <h2>Las relaciones comienzan<br />con una conversación</h2>
+          <p class="lead">Trabajamos con un número limitado de clientes para asegurar profundidad de relación, alineación y calidad de asesoramiento. Si considera que existe una afinidad, nos gustaría conocerle.</p>
+          <a href="contacto.html" class="btn btn--primary">Contactar</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <span class="footer__logo-mark">Atlas</span>
+            <span class="footer__logo-sub">Wealth Management</span>
+          </a>
+          <p class="footer__tagline">Asesoramiento patrimonial independiente para familias y emprendedores. Una firma construida sobre confianza, disciplina y perspectiva global.</p>
+          <a href="contacto.html" class="btn-arrow btn-arrow--white" style="font-size: 0.72rem;">Iniciar una conversación</a>
+        </div>
+
+        <div>
+          <div class="footer__col-title">La Firma</div>
+          <ul class="footer__nav">
+            <li><a href="nuestra-firma.html#historia">Historia y Propiedad</a></li>
+            <li><a href="nuestra-firma.html#valores">Valores y Stewardship</a></li>
+            <li><a href="nuestra-firma.html#independencia">Independencia</a></li>
+            <li><a href="nuestra-firma.html#perspectiva">Perspectiva Global</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">A Quién Asesoramos</div>
+          <ul class="footer__nav">
+            <li><a href="a-quien-asesoramos.html#emprendedores">Emprendedores</a></li>
+            <li><a href="a-quien-asesoramos.html#familias">Familias Multi-Gen.</a></li>
+            <li><a href="a-quien-asesoramos.html#instituciones">Family Offices</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Servicios</div>
+          <ul class="footer__nav">
+            <li><a href="que-hacemos.html#inversiones">Gestión de Inversiones</a></li>
+            <li><a href="que-hacemos.html#advisory">Advisory Estratégico</a></li>
+            <li><a href="que-hacemos.html#family-office">Family Office</a></li>
+            <li><a href="nuestro-enfoque.html">Nuestro Enfoque</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Perspectivas</div>
+          <ul class="footer__nav">
+            <li><a href="insights.html#perspectivas">Perspectivas de Mercado</a></li>
+            <li><a href="insights.html#largo-plazo">Inversión Largo Plazo</a></li>
+            <li><a href="insights.html#cartas">Cartas Atlas</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer__grid -->
+
+      <div class="footer__bottom">
+        <p class="footer__legal">
+          &copy; 2025 Atlas Wealth Management. Todos los derechos reservados.
+          &nbsp;&nbsp;
+          <a href="contacto.html#privacidad">Política de Privacidad</a>
+          &nbsp;&middot;&nbsp;
+          <a href="contacto.html#legal">Aviso Legal</a>
+          &nbsp;&middot;&nbsp;
+          <a href="contacto.html#regulacion">Regulación</a>
+        </p>
+        <a href="contacto.html#login" class="footer__legal" style="color: var(--bronze-pale); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;">Client Login &rarr;</a>
+      </div>
+
+      <div class="footer__disclaimer">
+        <p>Atlas Wealth Management es una firma de asesoramiento patrimonial independiente. La información contenida en este sitio tiene carácter exclusivamente informativo y no constituye una oferta, recomendación de inversión ni asesoramiento financiero personalizado. Las inversiones en mercados financieros conllevan riesgos, incluyendo la posible pérdida del capital invertido. El rendimiento pasado no garantiza resultados futuros. Para más información sobre nuestra regulación y disclaimers, consulte nuestra sección legal.</p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- ─── END FOOTER ─── -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
